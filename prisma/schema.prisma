@@ -1,0 +1,76 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Lead {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String?
+  phone     String?
+  source    String?  @default("landing_page")
+  createdAt DateTime @default(now())
+}
+
+model ContactSubmission {
+  id        Int      @id @default(autoincrement())
+  name      String
+  email     String
+  subject   String?
+  message   String   @db.Text
+  createdAt DateTime @default(now())
+  phone     String?
+}
+
+model Article {
+  id                  Int      @id @default(autoincrement())
+  slug_en             String   @unique
+  slug_ar             String   @unique
+  title_en            String
+  title_ar            String
+  content_en          String   @db.Text
+  content_ar          String   @db.Text
+  publishedAt         DateTime @default(now())
+  updatedAt           DateTime @updatedAt
+  image               String?  @db.Text
+  meta_description_ar String?  @db.Text
+  meta_description_en String?  @db.Text
+  meta_keywords_ar    String?  @db.Text
+  meta_keywords_en    String?  @db.Text
+  meta_title_ar       String?
+  meta_title_en       String?
+
+  @@index([slug_en])
+  @@index([slug_ar])
+}
+
+model User {
+  id        Int      @id @default(autoincrement())
+  email     String   @unique
+  name      String?
+  password  String
+  role      Role     @default(ADMIN)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model SiteSettings {
+  id        Int      @id @default(1)
+  facebook  String?
+  twitter   String?
+  instagram String?
+  linkedin  String?
+  email     String?
+  phone_sa  String?
+  phone_sy  String?
+  updatedAt DateTime @updatedAt
+}
+
+enum Role {
+  ADMIN
+  EDITOR
+}

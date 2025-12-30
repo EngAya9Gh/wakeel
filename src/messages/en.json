@@ -1,0 +1,149 @@
+{
+    "HomePage": {
+        "title": "Empowering Your Digital Transformation",
+        "subtitle": "Professional software and marketing solutions designed to scale your business to new heights.",
+        "servicesDesc": "We engineer digital products that dominate markets and redefine user expectations.",
+        "getStarted": "Start Your Journey",
+        "services": "Our Specialized Services",
+        "contact": "Contact Us",
+        "viewService": "Explore Service"
+    },
+    "Stats": {
+        "projects": "Digital Projects",
+        "roots": "Deep Roots",
+        "excellence": "Global Excellence",
+        "reliability": "Uptime Reliability",
+        "support": "Expert Support",
+        "topTier": "Top Tier"
+    },
+    "Navigation": {
+        "home": "Home",
+        "services": "Services",
+        "about": "About Us",
+        "blog": "Blog",
+        "contact": "Let's Talk",
+        "dashboard": "Dashboard"
+    },
+    "Contact": {
+        "title": "Get in Touch",
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "countryCode": "Country Code",
+        "subject": "Subject",
+        "message": "Message",
+        "send": "Send Message",
+        "sending": "Sending...",
+        "success": "Message sent successfully!",
+        "error": "Something went wrong. Please try again."
+    },
+    "LeadForm": {
+        "title": "",
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "optional": "Optional",
+        "submit": "Send Request "
+    },
+    "Services": {
+        "title": "Our Engineering Services",
+        "subtitle": "Future-proof technology solutions engineered for massive scale and unparalleled performance.",
+        "webDev": "Web Development",
+        "webDevDesc": "High-performance, scalable web applications tailored to your business needs using React, Next.js, and modern tech.",
+        "marketing": "Digital Marketing Strategy",
+        "marketingDesc": "Data-driven campaigns that drive ROI. SEO, SEM, and Social Media management.",
+        "ai": "Artificial Intelligence",
+        "aiDesc": "Transform your business with state-of-the-art Large Language Models (LLMs) and Intelligent Chat Agents designed for the modern era.",
+        "mobile": "Mobile App Development",
+        "mobileDesc": "Premium iOS and Android applications designed for seamless user experiences.",
+        "ctaTitle": "Ready to Build the Future?",
+        "ctaSubtitle": "Partner with a team of elite engineers and strategists to bring your vision to life.",
+        "ctaButton": "Schedule a Free Strategy Call",
+        "performance": "Performance",
+        "performanceDesc": "Enterprise-grade speed.",
+        "scalability": "Scalability",
+        "scalabilityDesc": "Ready for massive growth.",
+        "security": "Security",
+        "securityDesc": "Top-tier data protection.",
+        "support": "Support",
+        "supportDesc": "24/7 Expert assistance."
+    },
+    "Testimonials": {
+        "title": "Client Success Stories",
+        "1": {
+            "name": "Ahmed Hassan",
+            "role": "CEO, TechStart",
+            "quote": "WakeeL transformed our digital presence. Professional, fast, and exactly what we needed."
+        },
+        "2": {
+            "name": "Sara Al-Rashid",
+            "role": "Marketing Director",
+            "quote": "Their marketing strategies doubled our leads in just 3 months. Highly recommended!"
+        },
+        "3": {
+            "name": "Omar Khalil",
+            "role": "Startup Founder",
+            "quote": "The best tech partner we've worked with. They understand business, not just code."
+        }
+    },
+    "Footer": {
+        "company": "Company",
+        "aboutUs": "About Us",
+        "services": "Services",
+        "blog": "Blog",
+        "contact": "Contact Us",
+        "offices": "Our Offices",
+        "riyadhOffice": "Riyadh Office",
+        "syriaOffice": "Syria Office",
+        "allRights": "All rights reserved",
+        "followUs": "Follow Us"
+    },
+    "About": {
+        "title": "About WakeeL",
+        "subtitle": "Building the future of digital excellence in Saudi Arabia.",
+        "story": "Our Story",
+        "storyContent": "Founded with a vision to revolutionize the tech landscape, WakeeL has grown into a leading force in digital transformation and marketing. We combine technical mastery with creative brilliance to deliver results that matter.",
+        "mission": "Our Mission",
+        "missionText": "To empower businesses in the MENA region with world-class digital solutions that drive innovation and efficiency.",
+        "team": "Meet the Experts",
+        "values": {
+            "title": "Our Values",
+            "innovation": "Innovation",
+            "innovationDesc": "Always pushing the boundaries of what's possible.",
+            "excellence": "Excellence",
+            "excellenceDesc": "Delivering nothing but the highest quality in every project.",
+            "integrity": "Integrity",
+            "integrityDesc": "Building trust through transparency and honesty.",
+            "partnership": "Partnership",
+            "partnershipDesc": "Walking besides our clients every step of the journey."
+        }
+    },
+    "HomeCTA": {
+        "title": "Transform Your Vision into Reality",
+        "subtitle": "Join hundreds of businesses that have scaled their operations with our world-class software solutions.",
+        "button": "Start Your Project Now"
+    },
+    "Metadata": {
+        "title": "WakeeL | Premium Software, AI & Marketing Solutions",
+        "description": "WakeeL provides state-of-the-art software development, AI solutions, and digital marketing services. Scale your business with Large Language Models (LLMs) and custom digital products.",
+        "keywords": "software development, digital marketing, AI, Large Language Models, LLM, Saudi Arabia, Riyadh, Syria, web apps"
+    },
+    "Admin": {
+        "dashboard": "Dashboard",
+        "articles": "Articles",
+        "leads": "Leads",
+        "contacts": "Messages",
+        "settings": "Settings",
+        "login": "Login to Admin",
+        "email": "Email Address",
+        "password": "Password",
+        "signIn": "Sign In",
+        "signOut": "Sign Out",
+        "welcome": "Welcome",
+        "users": "Users Management",
+        "addUser": "Add New User",
+        "editUser": "Edit User",
+        "resetPassword": "Reset Password",
+        "role": "Role"
+    }
+}
