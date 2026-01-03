@@ -55,12 +55,12 @@ export default async function ArticlePage({ params }: Props) {
 
     return (
         <main style={{ background: '#F8FAFC', minHeight: '100vh', paddingBottom: '160px', paddingTop: '120px' }}>
-            <div className="container" style={{ position: 'relative', zIndex: 10 }}>
+            <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1400px' }}>
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'minmax(0, 1fr) 350px',
+                    gridTemplateColumns: 'minmax(0, 1fr) 320px',
                     gap: '40px',
-                    maxWidth: '1200px',
+                    maxWidth: '100%',
                     margin: '0 auto',
                     alignItems: 'start',
                 }} className="blog-details-grid">

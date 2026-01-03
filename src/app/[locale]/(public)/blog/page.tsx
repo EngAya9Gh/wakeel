@@ -49,7 +49,7 @@ export default async function BlogPage({
                 subtitle={locale === 'ar' ? 'اكتشف أحدث المقالات والأفكار في عالم التكنولوجيا والتحول الرقمي.' : 'Explore our latest articles and insights on technology and digital transformation.'}
             />
 
-            <div className="container" style={{ marginTop: '100px' }}>
+            <div className="container" style={{ position: 'relative', zIndex: 10, maxWidth: '1400px' }}>
                 <BlogSearch placeholder={t('search')} locale={locale} />
 
                 {articles.length === 0 ? (
@@ -59,8 +59,9 @@ export default async function BlogPage({
                 ) : (
                     <div style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(350px, 1fr))',
-                        gap: '40px'
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                        gap: '40px',
+                        maxWidth: '100%',
                     }}>
                         {articles.map((article, index) => {
                             const title = locale === 'ar' ? (article.title_ar || article.title_en) : article.title_en;
