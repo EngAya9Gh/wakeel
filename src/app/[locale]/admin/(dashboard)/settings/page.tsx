@@ -47,6 +47,10 @@ export default async function SettingsPage() {
                         <label className={styles.label}>Phone (Syria)</label>
                         <input name="phone_sy" defaultValue={settings?.phone_sy || ''} className={styles.input} placeholder="+963 ..." />
                     </div>
+                    <div className={styles.formGroup}>
+                        <label className={styles.label}>WhatsApp Number</label>
+                        <input name="whatsapp" defaultValue={settings?.whatsapp || ''} className={styles.input} placeholder="+966 ..." />
+                    </div>
                 </div>
 
                 <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '1rem' }}>

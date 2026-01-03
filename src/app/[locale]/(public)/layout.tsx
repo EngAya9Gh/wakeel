@@ -9,8 +9,11 @@ type Props = {
     params: Promise<{ locale: string }>;
 };
 
+import { getSettings } from '@/actions/admin/settings';
+
 export default async function PublicLayout({ children, params }: Props) {
     const { locale } = await params;
+    const settings = await getSettings();
 
     return (
         <>
@@ -20,7 +23,7 @@ export default async function PublicLayout({ children, params }: Props) {
                 {children}
             </main>
             <Footer locale={locale} />
-            <WhatsAppButton />
+            <WhatsAppButton phone={settings?.whatsapp || undefined} />
         </>
     );
 }

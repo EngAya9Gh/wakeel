@@ -67,6 +67,7 @@ model SiteSettings {
   email     String?
   phone_sa  String?
   phone_sy  String?
+  whatsapp  String?
   updatedAt DateTime @updatedAt
 }
 

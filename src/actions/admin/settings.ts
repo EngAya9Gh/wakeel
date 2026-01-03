@@ -37,6 +37,8 @@ export async function updateSettings(formData: FormData) {
     const phone_sa = formData.get('phone_sa') as string;
     const phone_sy = formData.get('phone_sy') as string;
 
+    const whatsapp = formData.get('whatsapp') as string;
+
     await prisma.siteSettings.upsert({
         where: { id: 1 },
         update: {
@@ -46,7 +48,8 @@ export async function updateSettings(formData: FormData) {
             linkedin,
             email,
             phone_sa,
-            phone_sy
+            phone_sy,
+            whatsapp
         },
         create: {
             id: 1,
@@ -56,7 +59,8 @@ export async function updateSettings(formData: FormData) {
             linkedin,
             email,
             phone_sa,
-            phone_sy
+            phone_sy,
+            whatsapp
         }
     });
 

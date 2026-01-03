@@ -61,6 +61,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
             description: t('description'),
             images: ['/og-image.png'],
         },
+        icons: {
+            icon: '/favicon.svg',
+            apple: '/favicon.svg',
+        },
     };
 }
 
