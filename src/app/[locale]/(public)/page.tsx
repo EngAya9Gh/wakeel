@@ -94,9 +94,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                             color: 'white'
                         }}>
                             {t('title').split(' ').map((word, i) => (
-                                <span key={i} style={{ display: 'inline-block' }}>
+                                <span key={i} style={{ display: 'block', marginBottom: '20px' }}>
                                     {i === 1 ? <span style={{ color: 'var(--color-primary)' }}>{word}</span> : word}
-                                    &nbsp;
                                 </span>
                             ))}
                         </h1>
