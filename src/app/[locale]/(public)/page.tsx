@@ -86,15 +86,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                         </div>
 
                         <h1 style={{
-                            fontSize: 'clamp(3rem, 10vw, 7rem)',
-                            lineHeight: 0.9,
+                            fontSize: 'clamp(2rem, 6vw, 4.5rem)',
+                            lineHeight: 1.3,
                             fontWeight: '950',
-                            letterSpacing: '-4px',
+                            letterSpacing: '-2px',
                             marginBottom: '32px',
                             color: 'white'
                         }}>
                             {t('title').split(' ').map((word, i) => (
-                                <span key={i} style={{ display: 'block', marginBottom: '20px' }}>
+                                <span key={i} style={{ display: 'block', marginBottom: '10px' }}>
                                     {i === 1 ? <span style={{ color: 'var(--color-primary)' }}>{word}</span> : word}
                                 </span>
                             ))}
