@@ -51,7 +51,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                 <div style={{
                     position: 'absolute',
                     top: '-10%', right: '-10%', width: '40%', height: '40%',
-                    background: 'radial-gradient(circle, rgba(59,130,246,0.15) 0%, transparent 70%)',
+                    background: 'radial-gradient(circle, rgba(255,102,0,0.15) 0%, transparent 70%)',
                     zIndex: 0
                 }} />
 
@@ -69,11 +69,11 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                                     display: 'inline-flex',
                                     alignItems: 'center',
                                     gap: '8px',
-                                    background: 'rgba(59, 130, 246, 0.15)',
-                                    border: '1px solid rgba(59, 130, 246, 0.3)',
+                                    background: 'rgba(255, 102, 0, 0.15)', // Orange glow
+                                    border: '1px solid rgba(255, 102, 0, 0.3)', // Orange border
                                     padding: '8px 16px',
                                     borderRadius: '100px',
-                                    color: '#60A5FA', // Light blue
+                                    color: 'var(--color-primary-light)', // Orange text from theme
                                     fontSize: '0.9rem',
                                     fontWeight: '700',
                                     marginBottom: '24px'

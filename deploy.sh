@@ -22,7 +22,7 @@ npm install
 # Run database migrations and generate Prisma client (if you use Prisma)
 echo "Running database migrations..."
 npx prisma generate
-npx prisma migrate deploy
+# npx prisma migrate deploy
 
 # Build the Next.js application
 echo "Building the application..."
