@@ -21,6 +21,14 @@ const crmScreenshots = [
     { src: '/crm/crm3.jpeg', alt: 'CRM Reports & Analytics' },
     { src: '/crm/crm4.jpeg', alt: 'CRM Sales Pipeline' },
     { src: '/crm/crm_image.jpeg', alt: 'CRM Activity Feed' },
+    { src: '/crm/5crm.jpeg', alt: 'CRM Interface' },
+    { src: '/crm/6crm.jpeg', alt: 'CRM Interface' },
+    { src: '/crm/crm7.jpeg', alt: 'CRM Interface' },
+    { src: '/crm/crm8.jpeg', alt: 'CRM Interface' },
+    { src: '/crm/crm8.jpg', alt: 'CRM Interface' },
+    { src: '/crm/crm9.jpeg', alt: 'CRM Interface' },
+    { src: '/crm/crmn.jpg', alt: 'CRM Interface' },
+    { src: '/crm/crrm9.jpeg', alt: 'CRM Interface' },
 ];
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
