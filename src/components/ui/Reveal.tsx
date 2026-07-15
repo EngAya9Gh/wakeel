@@ -5,9 +5,10 @@ import { useEffect, useRef, useState } from 'react';
 interface RevealProps {
     children: React.ReactNode;
     className?: string;
+    delay?: number;
 }
 
-export default function Reveal({ children, className = "" }: RevealProps) {
+export default function Reveal({ children, className = "", delay = 0 }: RevealProps) {
     const ref = useRef<HTMLDivElement>(null);
     const [isVisible, setIsVisible] = useState(false);
 
@@ -37,6 +38,7 @@ export default function Reveal({ children, className = "" }: RevealProps) {
         <div
             ref={ref}
             className={`reveal ${isVisible ? 'active' : ''} ${className}`}
+            style={{ transitionDelay: `${delay}ms` }}
         >
             {children}
         </div>
