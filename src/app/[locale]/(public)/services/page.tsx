@@ -18,10 +18,8 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
     const t = await getTranslations({ locale, namespace: 'Services' });
 
     const services = [
-        { key: 'webDev', icon: '💻', image: '/hero.png' },
-        { key: 'mobile', icon: '📱', image: '/mobile-app.png' },
-        { key: 'ai', icon: '🤖', image: '/ai-service.png' },
-        { key: 'marketing', icon: '📈', image: '/marketing.png' },
+        { key: 'crm', icon: '💻', image: '/web-dev.png' },
+        { key: 'whatsappOtp', icon: '📱', image: '/mobile-app.png' },
     ];
 
     return (

@@ -4,7 +4,8 @@ set -e
 echo "Starting deployment for Next.js app..."
 
 # Automatically navigate to the directory where this script is located
-cd /home/wakeel/htdocs/wakeel.cc
+DIR="$(cd "$(dirname "$0")" && pwd)"
+cd "$DIR"
 
 # Pull the latest changes from the main branch
 echo "Pulling latest code from GitHub..."
