@@ -30,6 +30,6 @@ npm run build
 
 # Restart the application (using PM2 in CloudPanel)
 echo "Restarting application..."
-pm2 restart wakeel.cc
+pm2 restart all
 
 echo "Deployment finished successfully!"
