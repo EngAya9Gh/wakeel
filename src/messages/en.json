@@ -62,7 +62,17 @@
         "security": "Security",
         "securityDesc": "Top-tier data protection.",
         "support": "Support",
-        "supportDesc": "24/7 Expert assistance."
+        "supportDesc": "24/7 Expert assistance.",
+        "crmFeature1": "Comprehensive Management",
+        "crmFeature1Desc": "Professional dashboard to track all details and sales pipelines.",
+        "crmFeature2": "Accurate Reports",
+        "crmFeature2Desc": "Live statistics and charts to support smart decision making.",
+        "otpFeature1": "Lightning Fast",
+        "otpFeature1Desc": "OTP messages reach the user in less than a single second.",
+        "otpFeature2": "Flexible API",
+        "otpFeature2Desc": "Easy integration with any system, website, or programming language.",
+        "otpFeature3": "Ultra Reliable",
+        "otpFeature3Desc": "We guarantee 99.9% delivery rate to ensure business continuity."
     },
     "Testimonials": {
         "title": "Client Success Stories",
