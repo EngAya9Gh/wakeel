@@ -48,7 +48,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
         <main style={{ background: '#FAFAFA' }}>
 
             {/* --- WAKEEL CRM SECTION (DARK PREMIUM - HERO REPLACEMENT) --- */}
-            <section style={{
+            <section id="crm" style={{
                 background: 'var(--color-secondary)', // User requested Hero Color
                 color: '#FFFFFF',
                 padding: '200px 0 120px 0', // Increased top padding to account for navbar since PageHeader is gone
@@ -153,7 +153,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
 
 
             {/* --- WHATSAPP OTP SECTION (DARK MODE PREMIUM) --- */}
-            <section style={{
+            <section id="whatsappOtp" style={{
                 background: '#0F172A', // Dark background for WhatsApp
                 padding: '120px 0',
                 position: 'relative',
