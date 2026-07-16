@@ -1,21 +1,19 @@
 {
     "HomePage": {
-        "title": "Empowering Your Digital Transformation",
-        "subtitle": "Professional software and marketing solutions designed to scale your business to new heights.",
+        "title": "Advanced Tech Solutions for Your Business",
+        "subtitle": "Empowering your growth with the most comprehensive CRM system and the fastest WhatsApp OTP API service.",
         "servicesDesc": "We engineer advanced digital products and cloud systems (like CRM and WhatsApp APIs) specifically designed to elevate and streamline your business.",
-        "getStarted": "Start Your Journey",
+        "getStarted": "Request a Demo",
         "servicesLabel": "Discover",
         "services": "Our Products",
         "contact": "Contact Us",
         "viewService": "Explore Product"
     },
     "Stats": {
-        "projects": "Digital Projects",
-        "roots": "Deep Roots",
-        "excellence": "Global Excellence",
-        "reliability": "Uptime Reliability",
-        "support": "Expert Support",
-        "topTier": "Top Tier"
+        "uptime": "Uptime & Reliability",
+        "speed": "Delivery Speed",
+        "customization": "Customization",
+        "support": "Direct Tech Support"
     },
     "Navigation": {
         "home": "Home",
@@ -53,9 +51,9 @@
         "crmDesc": "A fully customized and integrated CRM system to help you manage your sales, customers, and team efficiently and effortlessly.",
         "whatsappOtp": "WhatsApp OTP Service Provider",
         "whatsappOtpDesc": "A robust and reliable service for sending One-Time Passwords (OTP) and automated alerts via WhatsApp for your apps and websites.",
-        "ctaTitle": "Ready to Build the Future?",
-        "ctaSubtitle": "Partner with a team of elite engineers and strategists to bring your vision to life.",
-        "ctaButton": "Schedule a Free Strategy Call",
+        "ctaTitle": "Ready to Upgrade Your Business?",
+        "ctaSubtitle": "Join companies using our technology to manage sales and accelerate customer communication.",
+        "ctaButton": "Contact Sales Now",
         "performance": "Performance",
         "performanceDesc": "Enterprise-grade speed.",
         "scalability": "Scalability",
@@ -107,11 +105,11 @@
     },
     "About": {
         "title": "About WakeeL",
-        "subtitle": "Building the future of digital excellence in Saudi Arabia.",
+        "subtitle": "Building advanced engineering solutions to empower businesses in Saudi Arabia and the region.",
         "story": "Our Story",
-        "storyContent": "Founded with a vision to revolutionize the tech landscape, WakeeL has grown into a leading force in digital transformation and marketing. We combine technical mastery with creative brilliance to deliver results that matter.",
+        "storyContent": "WakeeL started by identifying a real gap in the market: companies need powerful yet uncomplicated management systems (CRM), and fast, reliable communication channels (WhatsApp API). So we decided to build advanced engineering solutions that combine performance and ease of use to enable limitless growth.",
         "mission": "Our Mission",
-        "missionText": "To empower businesses in the MENA region with world-class digital solutions that drive innovation and efficiency.",
+        "missionText": "To empower businesses by providing cutting-edge technical tools that streamline daily management and ensure effective customer communication.",
         "team": "Meet the Experts",
         "values": {
             "title": "Our Values",
@@ -126,14 +124,14 @@
         }
     },
     "HomeCTA": {
-        "title": "Transform Your Vision into Reality",
-        "subtitle": "Join hundreds of businesses that have scaled their operations with our world-class software solutions.",
-        "button": "Start Your Project Now"
+        "title": "Turn Your Vision into Reality",
+        "subtitle": "Join the businesses that have upgraded their operations with our advanced software solutions.",
+        "button": "Contact Sales Now"
     },
     "Metadata": {
-        "title": "WakeeL | Premium Software, AI & Marketing Solutions",
-        "description": "WakeeL provides state-of-the-art software development, AI solutions, and digital marketing services. Scale your business with Large Language Models (LLMs) and custom digital products.",
-        "keywords": "software development, digital marketing, AI, Large Language Models, LLM, Saudi Arabia, Riyadh, Syria, web apps"
+        "title": "WakeeL | Integrated CRM & WhatsApp OTP Provider",
+        "description": "Discover WakeeL's technical solutions. We offer a customized CRM system to efficiently manage your business, and an ultra-fast WhatsApp API for OTP messages.",
+        "keywords": "CRM, Customer Management System, WhatsApp OTP, WhatsApp API, Saudi Arabia, Riyadh, Syria, Software Solutions"
     },
     "Admin": {
         "dashboard": "Dashboard",

@@ -102,10 +102,51 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                                     fontSize: '1.3rem',
                                     lineHeight: '1.7',
                                     color: '#94A3B8',
-                                    marginBottom: '60px'
+                                    marginBottom: '40px'
                                 }}>
                                     {t('crmDesc')}
                                 </p>
+                                {/* CRM CTA Buttons */}
+                                <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', justifyContent: 'center' }}>
+                                    <Link
+                                        href="/contact"
+                                        style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '10px',
+                                            background: 'var(--color-primary)',
+                                            color: '#fff',
+                                            padding: '16px 36px',
+                                            borderRadius: '100px',
+                                            fontWeight: '800',
+                                            fontSize: '1.1rem',
+                                            textDecoration: 'none',
+                                            boxShadow: '0 10px 30px rgba(255,102,0,0.3)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        {isRtl ? 'اطلب عرض تجريبي مجاني' : 'Request a Free Demo'}
+                                    </Link>
+                                    <Link
+                                        href="/contact"
+                                        style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '10px',
+                                            background: 'rgba(255,255,255,0.07)',
+                                            color: '#fff',
+                                            padding: '16px 36px',
+                                            borderRadius: '100px',
+                                            fontWeight: '700',
+                                            fontSize: '1.1rem',
+                                            textDecoration: 'none',
+                                            border: '1px solid rgba(255,255,255,0.15)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        {isRtl ? 'تواصل معنا' : 'Contact Us'}
+                                    </Link>
+                                </div>
                             </Reveal>
                         </div>
 
@@ -170,7 +211,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                     <div className="services-detail-grid" style={{ alignItems: 'center' }}>
                         
                         {/* Text Side */}
-                        <div>
+                        <div style={{ textAlign: 'center' }}>
                             <Reveal>
                                 <div style={{
                                     display: 'inline-flex',
@@ -233,6 +274,49 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                                             </div>
                                         </div>
                                     ))}
+                                </div>
+                                {/* WhatsApp CTA Buttons */}
+                                <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '40px', justifyContent: 'center' }}>
+                                    <a
+                                        href="https://provider.wakeel.cc"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '10px',
+                                            background: '#25D366',
+                                            color: '#fff',
+                                            padding: '16px 36px',
+                                            borderRadius: '100px',
+                                            fontWeight: '800',
+                                            fontSize: '1.1rem',
+                                            textDecoration: 'none',
+                                            boxShadow: '0 10px 30px rgba(37,211,102,0.3)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        {isRtl ? 'ابدأ الآن مجاناً' : 'Get Started Free'}
+                                    </a>
+                                    <Link
+                                        href="/contact"
+                                        style={{
+                                            display: 'inline-flex',
+                                            alignItems: 'center',
+                                            gap: '10px',
+                                            background: 'rgba(255,255,255,0.07)',
+                                            color: '#fff',
+                                            padding: '16px 36px',
+                                            borderRadius: '100px',
+                                            fontWeight: '700',
+                                            fontSize: '1.1rem',
+                                            textDecoration: 'none',
+                                            border: '1px solid rgba(255,255,255,0.15)',
+                                            transition: 'all 0.3s ease'
+                                        }}
+                                    >
+                                        {isRtl ? 'تحدث مع فريقنا' : 'Talk to Our Team'}
+                                    </Link>
                                 </div>
                             </Reveal>
                         </div>

@@ -45,33 +45,40 @@ export default function Header({ locale }: { locale: string }) {
             borderBottom: scrolled || menuOpen ? '1px solid #E2E8F0' : 'none'
         }}>
             <div className="container" style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                {/* Logo */}
-                <Link href="/" style={{ textDecoration: 'none' }} onClick={() => setMenuOpen(false)}>
-                    <Logo color={(['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? 'light' : 'dark'} />
-                </Link>
+                
+                {/* Left Side (LTR) / Right Side (RTL) - Logo & Links */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '3rem' }}>
+                    {/* Logo */}
+                    <Link href="/" style={{ textDecoration: 'none' }} onClick={() => setMenuOpen(false)}>
+                        <Logo color={(['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? 'light' : 'dark'} />
+                    </Link>
 
-                {/* Desktop Nav */}
-                <nav style={{ display: 'flex', alignItems: 'center', gap: '2.5rem' }} className="nav-desktop">
-                    {navLinks.map((link) => (
-                        <Link
-                            key={link.href}
-                            href={link.href}
-                            style={{
-                                color: link.active
-                                    ? 'var(--color-primary)'
-                                    : (['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? 'white' : 'var(--color-secondary)',
-                                fontWeight: link.active ? '800' : '600',
-                                fontSize: '0.95rem',
-                                opacity: link.active ? 1 : 0.8,
-                                transition: 'all 0.2s ease',
-                                position: 'relative'
-                            }}
-                            className="nav-link"
-                        >
-                            {link.label}
-                        </Link>
-                    ))}
+                    {/* Desktop Nav Links */}
+                    <nav style={{ display: 'flex', alignItems: 'center', gap: '1.5rem' }} className="nav-desktop">
+                        {navLinks.map((link) => (
+                            <Link
+                                key={link.href}
+                                href={link.href}
+                                style={{
+                                    color: link.active
+                                        ? 'var(--color-primary)'
+                                        : (['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? 'white' : 'var(--color-secondary)',
+                                    fontWeight: link.active ? '800' : '600',
+                                    fontSize: '0.95rem',
+                                    opacity: link.active ? 1 : 0.8,
+                                    transition: 'all 0.2s ease',
+                                    position: 'relative'
+                                }}
+                                className="nav-link"
+                            >
+                                {link.label}
+                            </Link>
+                        ))}
+                    </nav>
+                </div>
 
+                {/* Right Side (LTR) / Left Side (RTL) - Actions */}
+                <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }} className="nav-desktop">
                     <button
                         onClick={() => switchLocale(locale === 'en' ? 'ar' : 'en')}
                         style={{
@@ -92,10 +99,10 @@ export default function Header({ locale }: { locale: string }) {
                         {locale === 'en' ? 'AR' : 'EN'}
                     </button>
 
-                    <Link href="/contact" className="btn-primary" style={{ padding: '0.7rem 1.8rem', borderRadius: '12px', fontSize: '0.9rem' }}>
+                    <Link href="/contact" className="btn-primary" style={{ padding: '0.7rem 1.4rem', borderRadius: '12px', fontSize: '0.85rem' }}>
                         {t('contact')}
                     </Link>
-                </nav>
+                </div>
 
                 {/* Mobile Toggle */}
                 <button

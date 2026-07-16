@@ -15,12 +15,11 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         { key: 'crm', icon: '💼', color: '#0EA5E9', image: '/crm/crm_image.jpeg' },
         { key: 'whatsappOtp', icon: '💬', color: '#10B981', image: '/mobile-app.png' }
     ];
-
     const stats = [
-        { val: '150+', label: statsT('projects') },
-        { val: statsT('roots'), label: statsT('excellence') },
-        { val: '99.9%', label: statsT('reliability') },
-        { val: statsT('topTier'), label: statsT('support') }
+        { val: '99.9%', label: statsT('uptime') },
+        { val: '< 1s', label: statsT('speed') },
+        { val: '100%', label: statsT('customization') },
+        { val: '24/7', label: statsT('support') }
     ];
 
     return (
@@ -92,7 +91,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                             color: 'white'
                         }}>
                             {t('title').split(' ').map((word, i) => (
-                                <span key={i} style={{ display: 'block', marginBottom: '10px' }}>
+                                <span key={i} style={{ display: 'inline-block', marginInlineEnd: '14px', marginBottom: '10px' }}>
                                     {i === 1 ? <span style={{ color: 'var(--color-primary)' }}>{word}</span> : word}
                                 </span>
                             ))}
