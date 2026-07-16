@@ -229,7 +229,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                             letterSpacing: '3px',
                             marginBottom: '16px'
                         }}>
-                            {t('services')}
+                            {t('servicesLabel')}
                         </div>
                         <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '950', marginBottom: '24px', color: 'var(--color-secondary)', letterSpacing: '-2px' }}>
                             {t('services')}

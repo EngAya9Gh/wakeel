@@ -2,11 +2,12 @@
     "HomePage": {
         "title": "Empowering Your Digital Transformation",
         "subtitle": "Professional software and marketing solutions designed to scale your business to new heights.",
-        "servicesDesc": "We engineer digital products that dominate markets and redefine user expectations.",
+        "servicesDesc": "We engineer advanced digital products and cloud systems (like CRM and WhatsApp APIs) specifically designed to elevate and streamline your business.",
         "getStarted": "Start Your Journey",
-        "services": "Our Specialized Services",
+        "servicesLabel": "Discover",
+        "services": "Our Products",
         "contact": "Contact Us",
-        "viewService": "Explore Service"
+        "viewService": "Explore Product"
     },
     "Stats": {
         "projects": "Digital Projects",
@@ -18,7 +19,7 @@
     },
     "Navigation": {
         "home": "Home",
-        "services": "Services",
+        "services": "Our Products",
         "about": "About Us",
         "blog": "Blog",
         "contact": "Let's Talk",
@@ -46,7 +47,7 @@
         "submit": "Send Request "
     },
     "Services": {
-        "title": "Our Engineering Services",
+        "title": "Our Engineering Products",
         "subtitle": "Future-proof technology solutions engineered for massive scale and unparalleled performance.",
         "crm": "Customer Relationship Management (CRM)",
         "crmDesc": "A fully customized and integrated CRM system to help you manage your sales, customers, and team efficiently and effortlessly.",
@@ -95,7 +96,7 @@
     "Footer": {
         "company": "Company",
         "aboutUs": "About Us",
-        "services": "Services",
+        "services": "Our Products",
         "blog": "Blog",
         "contact": "Contact Us",
         "offices": "Our Offices",
