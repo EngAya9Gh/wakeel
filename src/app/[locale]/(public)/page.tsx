@@ -2,6 +2,7 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
 import Reveal from '@/components/ui/Reveal';
+import { QrCode } from 'lucide-react';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -21,6 +22,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         { val: '100%', label: statsT('customization') },
         { val: '24/7', label: statsT('support') }
     ];
+
+    const isRtl = locale === 'ar';
 
     return (
         <main>
@@ -266,7 +269,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                                     <div style={{
                                         position: 'relative',
                                         width: '100%',
-                                        height: '220px',
+                                        height: '260px',
                                         overflow: 'hidden',
                                         background: s.key === 'whatsappOtp' ? '#0F172A' : '#f8f9fa'
                                     }}>
@@ -300,19 +303,55 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                                                         <div style={{ fontWeight: '700', fontSize: '0.8rem' }}>WakeeL</div>
                                                     </div>
                                                     {/* Body */}
-                                                    <div style={{ flex: 1, background: '#E5DDD5', padding: '12px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                                    <div style={{ flex: 1, background: '#E5DDD5', padding: '10px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
+                                                        {/* Campaign Message (Bot) */}
                                                         <div style={{
                                                             background: '#fff',
-                                                            padding: '8px',
-                                                            borderRadius: '8px 8px 8px 0',
+                                                            padding: '8px 10px',
+                                                            borderRadius: isRtl ? '8px 0 8px 8px' : '0 8px 8px 8px',
                                                             maxWidth: '90%',
-                                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)'
+                                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                                                            alignSelf: 'flex-start'
                                                         }}>
-                                                            <div style={{ color: '#000', fontSize: '0.75rem', fontWeight: 'bold', marginBottom: '4px' }}>
-                                                                رمز التحقق الخاص بك هو:
+                                                            <div style={{ color: '#000', fontSize: '0.65rem', lineHeight: '1.4', fontWeight: '600' }}>
+                                                                {isRtl ? '✨ دعوة لمؤتمر التقنية غداً بالرياض.' : '✨ Invitation: Tech Conference tomorrow.'}
                                                             </div>
-                                                            <div style={{ fontSize: '1.2rem', fontWeight: '900', letterSpacing: '2px', color: '#075E54' }}>
-                                                                492817
+                                                        </div>
+
+                                                        {/* User Reply */}
+                                                        <div style={{
+                                                            background: '#dcf8c6',
+                                                            padding: '8px 10px',
+                                                            borderRadius: isRtl ? '0 8px 8px 8px' : '8px 0 8px 8px',
+                                                            maxWidth: '90%',
+                                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                                                            alignSelf: 'flex-end'
+                                                        }}>
+                                                            <div style={{ color: '#000', fontSize: '0.65rem', lineHeight: '1.4', fontWeight: '500' }}>
+                                                                {isRtl ? 'تأكيد الحضور' : 'Confirm Attendance'}
+                                                            </div>
+                                                        </div>
+
+                                                        {/* Ticket Message (Bot) */}
+                                                        <div style={{
+                                                            background: '#fff',
+                                                            padding: '8px 10px',
+                                                            borderRadius: isRtl ? '8px 0 8px 8px' : '0 8px 8px 8px',
+                                                            maxWidth: '90%',
+                                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                                                            alignSelf: 'flex-start',
+                                                            display: 'flex',
+                                                            alignItems: 'center',
+                                                            gap: '8px'
+                                                        }}>
+                                                            <QrCode size={28} color="#075E54" />
+                                                            <div>
+                                                                <div style={{ color: '#000', fontSize: '0.65rem', fontWeight: 'bold' }}>
+                                                                    {isRtl ? 'تذكرة الدخول' : 'Entry Ticket'}
+                                                                </div>
+                                                                <div style={{ fontSize: '0.6rem', color: '#666' }}>
+                                                                    TCK-8439
+                                                                </div>
                                                             </div>
                                                         </div>
                                                     </div>

@@ -4,7 +4,7 @@ import { Link } from '@/i18n/routing';
 import Reveal from '@/components/ui/Reveal';
 import ImageSlider from '@/components/ui/ImageSlider';
 import MacbookMockup from '@/components/ui/MacbookMockup';
-import { CheckCircle, Zap, BarChart, Shield, Settings, MessageSquare, Globe, Fingerprint } from 'lucide-react';
+import { CheckCircle, Zap, BarChart, Shield, Settings, MessageSquare, Globe, Fingerprint, MapPin } from 'lucide-react';
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -350,24 +350,92 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                                     </div>
                                     {/* Mockup Body - Chat */}
                                     <div style={{ flex: 1, background: '#E5DDD5', padding: '20px', display: 'flex', flexDirection: 'column', gap: '16px' }}>
-                                        <div style={{ alignSelf: 'center', background: 'rgba(0,0,0,0.1)', color: '#555', padding: '4px 12px', borderRadius: '12px', fontSize: '0.8rem' }}>
+                                        <div style={{ alignSelf: 'center', background: 'rgba(0,0,0,0.1)', color: '#555', padding: '4px 12px', borderRadius: '12px', fontSize: '0.8rem', marginBottom: '8px' }}>
                                             {isRtl ? 'اليوم' : 'Today'}
                                         </div>
-                                        <div style={{
+                                        
+                                        {/* Campaign Message (Bot) */}
+                                        <div className="animate-fade-in" style={{
                                             background: '#fff',
-                                            padding: '12px 16px',
-                                            borderRadius: '8px 8px 8px 0',
+                                            padding: '10px 14px',
+                                            borderRadius: isRtl ? '8px 0 8px 8px' : '0 8px 8px 8px',
                                             maxWidth: '85%',
                                             boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
                                             alignSelf: 'flex-start'
                                         }}>
-                                            <div style={{ color: '#000', fontSize: '0.95rem', lineHeight: '1.4', fontWeight: '500' }}>
-                                                {isRtl ? 'رمز التحقق (OTP) الخاص بك هو:' : 'Your OTP code is:'}
+                                            <div style={{ color: '#000', fontSize: '0.85rem', lineHeight: '1.4', fontWeight: '600' }}>
+                                                {isRtl ? '✨ نتشرف بدعوتكم لحضور مؤتمر التقنية السنوي غداً في الرياض.' : '✨ You are invited to the annual Tech Conference tomorrow in Riyadh.'}
                                             </div>
-                                            <div style={{ fontSize: '1.8rem', fontWeight: '900', color: '#128C7E', margin: '8px 0', letterSpacing: '2px' }}>
-                                                739 421
+                                            <div style={{ fontSize: '0.65rem', color: '#999', textAlign: 'right', marginTop: '4px' }}>10:40</div>
+                                        </div>
+
+                                        {/* User Reply (User) */}
+                                        <div className="animate-fade-in delay-1" style={{
+                                            background: '#dcf8c6',
+                                            padding: '10px 14px',
+                                            borderRadius: isRtl ? '0 8px 8px 8px' : '8px 0 8px 8px',
+                                            maxWidth: '85%',
+                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                                            alignSelf: 'flex-end'
+                                        }}>
+                                            <div style={{ color: '#000', fontSize: '0.85rem', lineHeight: '1.4', fontWeight: '500' }}>
+                                                {isRtl ? 'تأكيد الحضور' : 'Confirm Attendance'}
                                             </div>
-                                            <div style={{ fontSize: '0.7rem', color: '#999', textAlign: 'right' }}>10:42 AM</div>
+                                            <div style={{ fontSize: '0.65rem', color: '#667781', textAlign: 'right', marginTop: '4px' }}>10:41</div>
+                                        </div>
+
+                                        {/* Chatbot Reply (Bot) */}
+                                        <div className="animate-fade-in delay-2" style={{
+                                            background: '#fff',
+                                            padding: '10px 14px',
+                                            borderRadius: isRtl ? '8px 0 8px 8px' : '0 8px 8px 8px',
+                                            maxWidth: '85%',
+                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                                            alignSelf: 'flex-start'
+                                        }}>
+                                            <div style={{ color: '#000', fontSize: '0.85rem', lineHeight: '1.4', fontWeight: '500' }}>
+                                                {isRtl ? 'تم تأكيد حضورك بنجاح! ننتظرك بكل سرور. إليك موقع الفعالية (Google Maps):' : 'Attendance confirmed successfully! We look forward to seeing you. Here is the event location:'}
+                                            </div>
+                                            <div style={{ fontSize: '0.65rem', color: '#999', textAlign: 'right', marginTop: '4px' }}>10:41</div>
+                                        </div>
+
+                                        {/* Location Message (Bot) */}
+                                        <div className="animate-fade-in delay-3" style={{
+                                            background: '#fff',
+                                            padding: '4px',
+                                            borderRadius: isRtl ? '8px 0 8px 8px' : '0 8px 8px 8px',
+                                            maxWidth: '85%',
+                                            width: '240px',
+                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
+                                            alignSelf: 'flex-start',
+                                            marginTop: '4px',
+                                            display: 'flex',
+                                            flexDirection: 'column'
+                                        }}>
+                                            <div style={{
+                                                width: '100%',
+                                                height: '110px',
+                                                background: '#e2e8f0',
+                                                backgroundImage: 'radial-gradient(#cbd5e1 1px, transparent 1px)',
+                                                backgroundSize: '16px 16px',
+                                                borderRadius: '6px',
+                                                display: 'flex',
+                                                alignItems: 'center',
+                                                justifyContent: 'center',
+                                                position: 'relative',
+                                                overflow: 'hidden'
+                                            }}>
+                                                <MapPin color="#EA4335" size={36} fill="#EA4335" style={{ filter: 'drop-shadow(0 4px 6px rgba(0,0,0,0.3))', transform: 'translateY(-4px)' }} />
+                                            </div>
+                                            <div style={{ padding: '8px 4px 4px' }}>
+                                                <div style={{ color: '#000', fontSize: '0.9rem', fontWeight: 'bold', whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
+                                                    {isRtl ? 'مركز الرياض للمعارض' : 'Riyadh Exhibition Center'}
+                                                </div>
+                                                <div style={{ color: '#2563EB', fontSize: '0.75rem', marginTop: '2px' }}>
+                                                    maps.google.com
+                                                </div>
+                                            </div>
+                                            <div style={{ fontSize: '0.65rem', color: '#999', textAlign: 'right', padding: '0 4px 4px' }}>10:42</div>
                                         </div>
                                     </div>
                                     {/* Notch simulate */}

@@ -1,7 +1,7 @@
 {
     "HomePage": {
         "title": "Advanced Tech Solutions for Your Business",
-        "subtitle": "Empowering your growth with the most comprehensive CRM system and the fastest WhatsApp OTP API service.",
+        "subtitle": "Empowering your growth with the most comprehensive CRM system and the fastest WhatsApp API service.",
         "servicesDesc": "We engineer advanced digital products and cloud systems (like CRM and WhatsApp APIs) specifically designed to elevate and streamline your business.",
         "getStarted": "Request a Demo",
         "servicesLabel": "Discover",
@@ -49,8 +49,8 @@
         "subtitle": "Future-proof technology solutions engineered for massive scale and unparalleled performance.",
         "crm": "Customer Relationship Management (CRM)",
         "crmDesc": "A fully customized and integrated CRM system to help you manage your sales, customers, and team efficiently and effortlessly.",
-        "whatsappOtp": "WhatsApp OTP Service Provider",
-        "whatsappOtpDesc": "A robust and reliable service for sending One-Time Passwords (OTP) and automated alerts via WhatsApp for your apps and websites.",
+        "whatsappOtp": "Integrated WhatsApp Business Platform",
+        "whatsappOtpDesc": "A robust platform to manage marketing campaigns, build interactive Chatbots, and send lightning-fast OTPs and alerts programmatically.",
         "ctaTitle": "Ready to Upgrade Your Business?",
         "ctaSubtitle": "Join companies using our technology to manage sales and accelerate customer communication.",
         "ctaButton": "Contact Sales Now",
@@ -66,12 +66,12 @@
         "crmFeature1Desc": "Professional dashboard to track all details and sales pipelines.",
         "crmFeature2": "Accurate Reports",
         "crmFeature2Desc": "Live statistics and charts to support smart decision making.",
-        "otpFeature1": "Lightning Fast",
-        "otpFeature1Desc": "OTP messages reach the user in less than a single second.",
-        "otpFeature2": "Flexible API",
-        "otpFeature2Desc": "Easy integration with any system, website, or programming language.",
-        "otpFeature3": "Ultra Reliable",
-        "otpFeature3Desc": "We guarantee 99.9% delivery rate to ensure business continuity."
+        "otpFeature1": "Smart Marketing Campaigns",
+        "otpFeature1Desc": "Reach thousands of customers with one click and get detailed analytics.",
+        "otpFeature2": "Automated Replies (Chatbot)",
+        "otpFeature2Desc": "Automate responses to customer inquiries 24/7 intelligently.",
+        "otpFeature3": "Fast OTP & Alerts",
+        "otpFeature3Desc": "Ultra-fast and reliable API integration to secure your users' accounts."
     },
     "Testimonials": {
         "title": "Client Success Stories",
