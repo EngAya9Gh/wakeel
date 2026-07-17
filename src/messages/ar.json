@@ -34,7 +34,12 @@
         "send": "إرسال الرسالة",
         "sending": "جاري الإرسال...",
         "success": "تم إرسال رسالتك بنجاح!",
-        "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى."
+        "error": "حدث خطأ ما. يرجى المحاولة مرة أخرى.",
+        "namePlaceholder": "أدخل اسمك بالكامل",
+        "emailPlaceholder": "example@domain.com",
+        "phonePlaceholder": "50 000 0000",
+        "subjectPlaceholder": "كيف يمكننا مساعدتك؟",
+        "messagePlaceholder": "أخبرنا عن مشروعك أو استفسارك..."
     },
     "LeadForm": {
         "title": "",

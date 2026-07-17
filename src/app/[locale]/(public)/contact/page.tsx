@@ -44,19 +44,19 @@ export default function ContactPage() {
                 ) : (
                     <form action={formAction} style={{ display: 'flex', flexDirection: 'column', gap: '1.8rem' }}>
 
-                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '1.5rem' }}>
+                        <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))', gap: '1.5rem' }}>
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                                 <label htmlFor="name" style={{ fontWeight: '700', color: '#111', fontSize: '0.95rem' }}>{t('name')}</label>
-                                <input type="text" id="name" name="name" required placeholder="John Doe"
-                                    style={{ padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem', transition: 'all 0.2s' }}
+                                <input type="text" id="name" name="name" required placeholder={t('namePlaceholder')}
+                                    style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem', transition: 'all 0.2s' }}
                                 />
                                 {state.errors?.name && <p style={{ color: '#dc3545', fontSize: '0.85rem' }}>{state.errors.name[0]}</p>}
                             </div>
 
                             <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                                 <label htmlFor="email" style={{ fontWeight: '700', color: '#111', fontSize: '0.95rem' }}>{t('email')}</label>
-                                <input type="email" id="email" name="email" required placeholder="john@example.com"
-                                    style={{ padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem', transition: 'all 0.2s' }}
+                                <input type="email" id="email" name="email" required placeholder={t('emailPlaceholder')}
+                                    style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem', transition: 'all 0.2s' }}
                                 />
                                 {state.errors?.email && <p style={{ color: '#dc3545', fontSize: '0.85rem' }}>{state.errors.email[0]}</p>}
                             </div>
@@ -64,25 +64,25 @@ export default function ContactPage() {
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                             <label htmlFor="phone" style={{ fontWeight: '700', color: '#111', fontSize: '0.95rem' }}>{t('phone')}</label>
-                            <div style={{ display: 'flex', gap: '0.5rem' }}>
+                            <div style={{ display: 'flex', gap: '0.5rem', width: '100%' }}>
                                 <CountrySelector name="countryCode" defaultValue="+966" />
-                                <input type="tel" id="phone" name="phone" placeholder="50 000 0000"
-                                    style={{ flex: 1, padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem' }}
+                                <input type="tel" id="phone" name="phone" placeholder={t('phonePlaceholder')}
+                                    style={{ flex: 1, width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem' }}
                                 />
                             </div>
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                             <label htmlFor="subject" style={{ fontWeight: '700', color: '#111', fontSize: '0.95rem' }}>{t('subject')}</label>
-                            <input type="text" id="subject" name="subject" placeholder="How can we help?"
-                                style={{ padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem' }}
+                            <input type="text" id="subject" name="subject" placeholder={t('subjectPlaceholder')}
+                                style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem' }}
                             />
                         </div>
 
                         <div style={{ display: 'flex', flexDirection: 'column', gap: '0.6rem' }}>
                             <label htmlFor="message" style={{ fontWeight: '700', color: '#111', fontSize: '0.95rem' }}>{t('message')}</label>
-                            <textarea id="message" name="message" rows={5} required placeholder="Tell us about your project..."
-                                style={{ padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem', resize: 'vertical' }}
+                            <textarea id="message" name="message" rows={5} required placeholder={t('messagePlaceholder')}
+                                style={{ width: '100%', padding: '1rem', borderRadius: '12px', border: '1px solid #eee', background: '#fcfcfc', outlineColor: 'var(--color-primary)', fontSize: '1rem', resize: 'vertical' }}
                             />
                             {state.errors?.message && <p style={{ color: '#dc3545', fontSize: '0.85rem' }}>{state.errors.message[0]}</p>}
                         </div>
