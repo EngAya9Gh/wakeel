@@ -18,6 +18,7 @@ const countryCodes: Country[] = [
     { code: '+973', country: 'Bahrain', flag: '🇧🇭' },
     { code: '+968', country: 'Oman', flag: '🇴🇲' },
     { code: '+963', country: 'Syria', flag: '🇸🇾', flagImg: '/flags/sy.svg' },
+    { code: '+90', country: 'Turkey', flag: '🇹🇷' },
     { code: '+20', country: 'Egypt', flag: '🇪🇬' },
     { code: '+962', country: 'Jordan', flag: '🇯🇴' },
     { code: '+961', country: 'Lebanon', flag: '🇱🇧' },
