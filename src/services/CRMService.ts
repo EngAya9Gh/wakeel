@@ -4,7 +4,7 @@
  * Does NOT block or affect user experience if CRM fails
  */
 
-const CRM_BASE_URL = process.env.CRM_BASE_URL || 'https://honeydew-sheep-602146.hostingersite.com';
+const CRM_BASE_URL = process.env.CRM_BASE_URL || 'https://app.wakeel.cc/';
 const CRM_API_KEY = process.env.CRM_API_KEY || 'JlQlzqUN1HFfeenMO5Iz8eJYMtOMxPnE772sqxJ';
 const CRM_ENDPOINT = '/api/public/v1/leads';
 

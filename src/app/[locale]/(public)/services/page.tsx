@@ -278,7 +278,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                                 {/* WhatsApp CTA Buttons */}
                                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '40px', justifyContent: 'center' }}>
                                     <a
-                                        href="https://provider.wakeel.cc"
+                                        href="https://provider.wakeel.cc/"
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{
