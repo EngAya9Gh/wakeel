@@ -25,14 +25,16 @@ export class CRMService {
      * Logs errors but does NOT throw exceptions
      */
     async sendLeadToCRM(data: CRMLeadData): Promise<void> {
-        // Fire and forget - don't await, don't block
-        this.sendAsync(data).catch((error) => {
+        // Await the call so Next.js doesn't cancel it
+        try {
+            await this.sendAsync(data);
+        } catch (error: any) {
             // Log error silently, don't propagate
             console.error('[CRM Integration] Failed to send lead:', {
                 error: error.message,
                 data: { name: data.name, phone: data.phone, source: data.source }
             });
-        });
+        }
     }
 
     /**

@@ -14,10 +14,14 @@ const schema = z.object({
 export async function submitContactForm(prevState: any, formData: FormData) {
     const contactService = new ContactService();
 
+    const countryCode = formData.get('countryCode') as string || '';
+    const phoneInput = formData.get('phone') as string || '';
+    const fullPhone = phoneInput ? `${countryCode}${phoneInput}` : '';
+
     const rawData = {
         name: formData.get('name') as string || '',
         email: formData.get('email') as string || '',
-        phone: formData.get('phone') as string || '',
+        phone: fullPhone,
         subject: formData.get('subject') as string || '',
         message: formData.get('message') as string || '',
     };

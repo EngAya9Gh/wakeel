@@ -22,10 +22,10 @@ export class ContactService {
             phone: phone || null,
         });
 
-        // Send to CRM silently in background (fire-and-forget)
-        // This will NOT throw errors or affect user experience
+        // Send to CRM (await it to ensure Next.js doesn't kill the background process)
+        // Wrapped in try/catch in CRMService so it won't throw errors to the user
         const crmData = CRMService.createContactFormLead(name, email, message, subject, phone);
-        this.crmService.sendLeadToCRM(crmData);
+        await this.crmService.sendLeadToCRM(crmData);
 
         return submission;
     }
