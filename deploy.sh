@@ -6,7 +6,7 @@ echo "Starting deployment for Next.js app..."
 # PM2 process name of the site (as shown by `pm2 status`)
 APP_NAME="wakeel-app"
 # Port used only if PM2 has no saved definition of the app; must match the App Port in CloudPanel
-APP_PORT="${APP_PORT:-3000}"
+APP_PORT="${APP_PORT:-3004}"
 
 # Automatically navigate to the directory where this script is located
 DIR="$(cd "$(dirname "$0")" && pwd)"
@@ -48,7 +48,8 @@ echo "Restarting application..."
 if pm2 describe "$APP_NAME" > /dev/null 2>&1; then
     pm2 restart "$APP_NAME" --update-env
 else
-    PORT="$APP_PORT" pm2 start npm --name "$APP_NAME" -- start
+    # Same command PM2 originally ran: `npm start -- -p <port>`
+    pm2 start npm --name "$APP_NAME" -- start -- -p "$APP_PORT"
 fi
 
 # Save the process list so PM2 can restore it after a server reboot
