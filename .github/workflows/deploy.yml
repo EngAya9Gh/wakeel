@@ -1,0 +1,31 @@
+name: Deploy site to VPS
+
+# Runs deploy.sh on the server over SSH, so deploying no longer depends on the
+# site being up (the /api/deploy webhook can't run while the app is down).
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # "Run workflow" button in the Actions tab
+
+concurrency:
+  group: deploy-site
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: SSH into VPS and deploy
+        uses: appleboy/ssh-action@v1.2.0
+        with:
+          host: ${{ secrets.SITE_VPS_HOST }}
+          username: ${{ secrets.SITE_VPS_USERNAME }}
+          password: ${{ secrets.SITE_VPS_PASSWORD }}
+          key: ${{ secrets.SITE_VPS_SSH_KEY }}
+          port: 22
+          command_timeout: 30m
+          script: |
+            cd "${{ secrets.SITE_APP_PATH }}"
+            bash deploy.sh
