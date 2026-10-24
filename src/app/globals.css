@@ -332,7 +332,19 @@ section {
 
 @media (max-width: 640px) {
   .stats-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Blog cards on phones: the card's .glass-card padding plus the body padding left a very narrow text column */
+@media (max-width: 640px) {
+  .blog-card {
+    padding: 0 !important;
+  }
+
+  .blog-card-body {
+    padding: 24px !important;
   }
 }
 

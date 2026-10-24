@@ -59,7 +59,7 @@ export default async function BlogPage({
                 ) : (
                     <div style={{
                         display: 'grid',
-                        gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))',
+                        gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))',
                         gap: '40px',
                         maxWidth: '100%',
                     }}>
@@ -79,7 +79,7 @@ export default async function BlogPage({
 
                             return (
                                 <Link href={`/blog/${slug}`} key={article.id} className="animate-fade-in" style={{ animationDelay: `${index * 0.1}s`, textDecoration: 'none' }}>
-                                    <article className="glass-card" style={{
+                                    <article className="glass-card blog-card" style={{
                                         height: '100%',
                                         display: 'flex',
                                         flexDirection: 'column',
@@ -119,7 +119,7 @@ export default async function BlogPage({
                                             </div>
                                         </div>
 
-                                        <div style={{ padding: '40px', display: 'flex', flexDirection: 'column', flex: 1 }}>
+                                        <div className="blog-card-body" style={{ padding: '40px', display: 'flex', flexDirection: 'column', flex: 1 }}>
                                             <h2 style={{
                                                 marginBottom: '20px',
                                                 fontSize: '1.6rem',

@@ -12,9 +12,9 @@ export default function MacbookMockup({ children }: { children: React.ReactNode 
             {/* Top screen frame (bezel + camera) */}
             <div style={{
                 background: '#1a1a1a',
-                padding: '24px 24px 0 24px',
-                borderTopLeftRadius: '32px',
-                borderTopRightRadius: '32px',
+                padding: 'clamp(8px, 2.5vw, 24px) clamp(8px, 2.5vw, 24px) 0',
+                borderTopLeftRadius: 'clamp(14px, 3vw, 32px)',
+                borderTopRightRadius: 'clamp(14px, 3vw, 32px)',
                 position: 'relative',
                 boxShadow: '0 20px 40px rgba(0,0,0,0.3)',
                 border: '1px solid #333',
@@ -47,7 +47,7 @@ export default function MacbookMockup({ children }: { children: React.ReactNode 
 
             {/* Bottom keyboard/base area */}
             <div style={{
-                height: '24px',
+                height: 'clamp(10px, 2.5vw, 24px)',
                 background: 'linear-gradient(to bottom, #d4d4d4, #b0b0b0)',
                 borderBottomLeftRadius: '16px',
                 borderBottomRightRadius: '16px',

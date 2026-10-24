@@ -106,16 +106,16 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
                         <div style={{ display: 'flex', gap: '20px', justifyContent: 'center', flexWrap: 'wrap' }}>
                             <Link href="/contact" className="btn-primary" style={{
-                                padding: '20px 56px',
-                                fontSize: '1.2rem',
+                                padding: 'clamp(14px, 3vw, 20px) clamp(28px, 7vw, 56px)',
+                                fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
                                 borderRadius: '16px',
                                 boxShadow: '0 20px 40px var(--color-primary-glow)'
                             }}>
                                 {t('contact')}
                             </Link>
                             <Link href="/services" className="btn-secondary" style={{
-                                padding: '20px 56px',
-                                fontSize: '1.2rem',
+                                padding: 'clamp(14px, 3vw, 20px) clamp(28px, 7vw, 56px)',
+                                fontSize: 'clamp(1rem, 2.5vw, 1.2rem)',
                                 borderRadius: '16px',
                                 background: 'rgba(255,255,255,0.05)',
                                 color: 'white',
@@ -184,23 +184,23 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             <ProductsShowcase locale={locale} />
 
             {/* Testimonials - Marquee */}
-            <section style={{ padding: '140px 0', background: 'var(--color-secondary)', color: 'white', overflow: 'hidden' }}>
-                <div className="container" style={{ textAlign: 'center', marginBottom: '100px' }}>
+            <section style={{ padding: 'clamp(80px, 12vw, 140px) 0', background: 'var(--color-secondary)', color: 'white', overflow: 'hidden' }}>
+                <div className="container" style={{ textAlign: 'center', marginBottom: 'clamp(48px, 8vw, 100px)' }}>
                     <h2 style={{ fontSize: 'clamp(3rem, 6vw, 4.5rem)', fontWeight: '950', letterSpacing: '-2px' }}>{testT('title')}</h2>
                 </div>
 
                 <div className="marquee-container">
                     {[1, 2, 3, 1, 2, 3].map((num, i) => (
                         <div key={i} style={{
-                            width: '550px',
-                            minWidth: '550px',
-                            padding: '60px',
-                            borderRadius: '48px',
+                            width: 'min(550px, 85vw)',
+                            minWidth: 'min(550px, 85vw)',
+                            padding: 'clamp(28px, 6vw, 60px)',
+                            borderRadius: 'clamp(28px, 5vw, 48px)',
                             background: 'rgba(255,255,255,0.03)',
                             border: '1px solid rgba(255,255,255,0.08)'
                         }}>
                             <div style={{ color: '#FBBF24', fontSize: '1.5rem', marginBottom: '32px' }}>★★★★★</div>
-                            <p style={{ fontSize: '1.4rem', lineHeight: '1.8', marginBottom: '48px', fontWeight: '500', opacity: 0.9 }}>
+                            <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', lineHeight: '1.8', marginBottom: 'clamp(28px, 5vw, 48px)', fontWeight: '500', opacity: 0.9 }}>
                                 "{testT(`${num}.quote` as any)}"
                             </p>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '20px' }}>
@@ -228,17 +228,17 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </section>
 
             {/* CTA Section - Translated */}
-            <section style={{ padding: '160px 1.5rem', textAlign: 'center', background: 'white' }}>
+            <section style={{ padding: 'clamp(90px, 14vw, 160px) 1.5rem', textAlign: 'center', background: 'white' }}>
                 <div className="container" style={{ maxWidth: '1000px' }}>
                     <h2 style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', fontWeight: '950', marginBottom: '32px', color: 'var(--color-secondary)', letterSpacing: '-3px' }}>
                         {ctaT('title')}
                     </h2>
-                    <p style={{ fontSize: '1.4rem', fontWeight: '500', marginBottom: '64px', color: 'var(--text-muted)', lineHeight: 1.6, maxWidth: '800px', marginInline: 'auto' }}>
+                    <p style={{ fontSize: 'clamp(1.1rem, 2.5vw, 1.4rem)', fontWeight: '500', marginBottom: 'clamp(36px, 6vw, 64px)', color: 'var(--text-muted)', lineHeight: 1.6, maxWidth: '800px', marginInline: 'auto' }}>
                         {ctaT('subtitle')}
                     </p>
                     <Link href="/contact" className="btn-primary" style={{
-                        padding: '24px 72px',
-                        fontSize: '1.4rem',
+                        padding: 'clamp(16px, 3vw, 24px) clamp(32px, 8vw, 72px)',
+                        fontSize: 'clamp(1.05rem, 2.5vw, 1.4rem)',
                         borderRadius: '20px',
                         boxShadow: '0 30px 60px -10px var(--color-primary-glow)'
                     }}>

@@ -78,7 +78,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             <section id="crm" style={{
                 background: 'var(--color-secondary)', // User requested Hero Color
                 color: '#FFFFFF',
-                padding: '200px 0 120px 0', // Increased top padding to account for navbar since PageHeader is gone
+                padding: 'clamp(130px, 18vw, 200px) 0 clamp(70px, 10vw, 120px) 0', // Increased top padding to account for navbar since PageHeader is gone
                 position: 'relative',
                 overflow: 'hidden'
             }}>
@@ -193,7 +193,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             {/* --- WHATSAPP OTP SECTION (DARK MODE PREMIUM) --- */}
             <section id="whatsappOtp" style={{
                 background: '#0F172A', // Dark background for WhatsApp
-                padding: '120px 0',
+                padding: 'clamp(70px, 10vw, 120px) 0',
                 position: 'relative',
                 overflow: 'hidden'
             }}>
@@ -451,7 +451,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             </section>
 
             {/* --- CTA SECTION --- */}
-            <section style={{ padding: '160px 0', textAlign: 'center', background: '#FAFAFA' }}>
+            <section style={{ padding: 'clamp(90px, 14vw, 160px) 0', textAlign: 'center', background: '#FAFAFA' }}>
                 <div className="container">
                     <Reveal>
                         <h2 style={{ fontSize: 'clamp(2.8rem, 6vw, 4.5rem)', fontWeight: '950', marginBottom: '24px', letterSpacing: isRtl ? '0' : '-3px', color: 'var(--color-secondary)' }}>
@@ -460,7 +460,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                         <p style={{ color: 'var(--text-muted)', fontSize: '1.5rem', marginBottom: '64px', maxWidth: '750px', marginInline: 'auto', fontWeight: '500', lineHeight: 1.6 }}>
                             {t('ctaSubtitle')}
                         </p>
-                        <Link href="/contact" className="btn-primary" style={{ padding: '24px 72px', fontSize: '1.4rem', borderRadius: '100px', boxShadow: '0 20px 40px rgba(0, 102, 255, 0.2)' }}>
+                        <Link href="/contact" className="btn-primary" style={{ padding: 'clamp(16px, 3vw, 24px) clamp(32px, 8vw, 72px)', fontSize: 'clamp(1.05rem, 2.5vw, 1.4rem)', borderRadius: '100px', boxShadow: '0 20px 40px rgba(0, 102, 255, 0.2)' }}>
                             {t('ctaButton')}
                         </Link>
                     </Reveal>

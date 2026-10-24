@@ -32,7 +32,7 @@ export default function LandingPage() {
             }}>
 
                 {/* Value Proposition */}
-                <div className="animate-fade-in" style={{ textAlign: 'start' }}>
+                <div className="animate-fade-in" style={{ textAlign: 'start', minWidth: 0 }}>
                     <h1 style={{
                         fontSize: 'clamp(2rem, 8vw, 3.5rem)',
                         marginBottom: '1.5rem',
@@ -62,6 +62,7 @@ export default function LandingPage() {
 
                 {/* Lead Form */}
                 <div className="glass-card animate-fade-in" style={{
+                    minWidth: 0,
                     background: 'white',
                     padding: 'clamp(1.5rem, 5vw, 3rem)',
                     borderRadius: '24px'
@@ -104,6 +105,7 @@ export default function LandingPage() {
                                         placeholder="55 123 4567"
                                         style={{
                                             flex: 1,
+                                            minWidth: 0, // lets the field shrink next to the country selector on phones
                                             padding: '1rem',
                                             borderRadius: '12px',
                                             border: '1px solid #eee',

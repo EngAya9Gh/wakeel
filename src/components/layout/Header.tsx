@@ -32,6 +32,9 @@ export default function Header({ locale }: { locale: string }) {
         { href: '/blog', label: t('blog'), active: pathname.startsWith('/blog') },
     ];
 
+    // Light (white) header content only while it sits over a dark hero; the open mobile menu has a white background
+    const onDarkHero = ['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled && !menuOpen;
+
     return (
         <header style={{
             position: 'fixed',
@@ -50,7 +53,7 @@ export default function Header({ locale }: { locale: string }) {
                 <div style={{ display: 'flex', alignItems: 'center', gap: '3rem' }}>
                     {/* Logo */}
                     <Link href="/" style={{ textDecoration: 'none' }} onClick={() => setMenuOpen(false)}>
-                        <Logo color={(['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? 'light' : 'dark'} />
+                        <Logo color={onDarkHero ? 'light' : 'dark'} />
                     </Link>
 
                     {/* Desktop Nav Links */}
@@ -62,7 +65,7 @@ export default function Header({ locale }: { locale: string }) {
                                 style={{
                                     color: link.active
                                         ? 'var(--color-primary)'
-                                        : (['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? 'white' : 'var(--color-secondary)',
+                                        : onDarkHero ? 'white' : 'var(--color-secondary)',
                                     fontWeight: link.active ? '800' : '600',
                                     fontSize: '0.95rem',
                                     opacity: link.active ? 1 : 0.8,
@@ -82,9 +85,9 @@ export default function Header({ locale }: { locale: string }) {
                     <button
                         onClick={() => switchLocale(locale === 'en' ? 'ar' : 'en')}
                         style={{
-                            background: (['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? 'rgba(255, 255, 255, 0.1)' : 'rgba(15, 23, 42, 0.05)',
-                            border: (['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(15, 23, 42, 0.1)',
-                            color: (['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? 'white' : 'var(--color-secondary)',
+                            background: onDarkHero ? 'rgba(255, 255, 255, 0.1)' : 'rgba(15, 23, 42, 0.05)',
+                            border: onDarkHero ? '1px solid rgba(255, 255, 255, 0.2)' : '1px solid rgba(15, 23, 42, 0.1)',
+                            color: onDarkHero ? 'white' : 'var(--color-secondary)',
                             width: '40px',
                             height: '40px',
                             borderRadius: '10px',
@@ -113,7 +116,7 @@ export default function Header({ locale }: { locale: string }) {
                         border: 'none',
                         fontSize: '1.8rem',
                         cursor: 'pointer',
-                        color: (['/', '/services', '/about', '/blog'].includes(pathname) && !scrolled) ? 'white' : 'var(--color-secondary)'
+                        color: onDarkHero ? 'white' : 'var(--color-secondary)'
                     }}
                     className="mobile-only"
                 >

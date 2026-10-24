@@ -27,17 +27,17 @@ export default function ImageSlider({ images }: { images: { src: string; alt: st
             <div style={{ position: "absolute", inset: 0, background: "linear-gradient(to top, rgba(0,0,0,0.4) 0%, transparent 20%)", zIndex: 3, pointerEvents: "none" }} />
 
             {/* Arrows */}
-            <button onClick={prevSlide} style={{ position: "absolute", left: "24px", top: "50%", transform: "translateY(-50%)", background: "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "56px", height: "56px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", backdropFilter: "blur(4px)", transition: "all 0.2s", zIndex: 10, boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }} onMouseOver={e => e.currentTarget.style.transform = "translateY(-50%) scale(1.05)"} onMouseOut={e => e.currentTarget.style.transform = "translateY(-50%) scale(1)"}>
-                <ChevronLeft size={28} color="var(--color-secondary)" />
+            <button onClick={prevSlide} style={{ position: "absolute", left: "clamp(8px, 2.5vw, 24px)", top: "50%", transform: "translateY(-50%)", background: "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "clamp(36px, 9vw, 56px)", height: "clamp(36px, 9vw, 56px)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", backdropFilter: "blur(4px)", transition: "all 0.2s", zIndex: 10, boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }} onMouseOver={e => e.currentTarget.style.transform = "translateY(-50%) scale(1.05)"} onMouseOut={e => e.currentTarget.style.transform = "translateY(-50%) scale(1)"}>
+                <ChevronLeft size={24} color="var(--color-secondary)" />
             </button>
-            <button onClick={nextSlide} style={{ position: "absolute", right: "24px", top: "50%", transform: "translateY(-50%)", background: "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "56px", height: "56px", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", backdropFilter: "blur(4px)", transition: "all 0.2s", zIndex: 10, boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }} onMouseOver={e => e.currentTarget.style.transform = "translateY(-50%) scale(1.05)"} onMouseOut={e => e.currentTarget.style.transform = "translateY(-50%) scale(1)"}>
-                <ChevronRight size={28} color="var(--color-secondary)" />
+            <button onClick={nextSlide} style={{ position: "absolute", right: "clamp(8px, 2.5vw, 24px)", top: "50%", transform: "translateY(-50%)", background: "rgba(255,255,255,0.9)", border: "none", borderRadius: "50%", width: "clamp(36px, 9vw, 56px)", height: "clamp(36px, 9vw, 56px)", display: "flex", alignItems: "center", justifyContent: "center", cursor: "pointer", backdropFilter: "blur(4px)", transition: "all 0.2s", zIndex: 10, boxShadow: "0 4px 12px rgba(0,0,0,0.1)" }} onMouseOver={e => e.currentTarget.style.transform = "translateY(-50%) scale(1.05)"} onMouseOut={e => e.currentTarget.style.transform = "translateY(-50%) scale(1)"}>
+                <ChevronRight size={24} color="var(--color-secondary)" />
             </button>
 
             {/* Indicators */}
-            <div style={{ position: "absolute", bottom: "32px", left: "50%", transform: "translateX(-50%)", display: "flex", gap: "12px", zIndex: 10 }}>
+            <div style={{ position: "absolute", bottom: "clamp(12px, 3vw, 32px)", left: "50%", transform: "translateX(-50%)", display: "flex", gap: "clamp(4px, 1vw, 12px)", zIndex: 10 }}>
                 {images.map((_, idx) => (
-                    <button key={idx} onClick={() => setCurrentIndex(idx)} style={{ width: currentIndex === idx ? "40px" : "12px", height: "12px", borderRadius: "6px", border: "none", background: currentIndex === idx ? "var(--color-primary)" : "rgba(255,255,255,0.6)", cursor: "pointer", transition: "all 0.3s ease", boxShadow: "0 2px 4px rgba(0,0,0,0.2)" }} />
+                    <button key={idx} onClick={() => setCurrentIndex(idx)} style={{ width: currentIndex === idx ? "clamp(16px, 4vw, 40px)" : "clamp(6px, 1.5vw, 12px)", height: "clamp(6px, 1.5vw, 12px)", borderRadius: "6px", border: "none", background: currentIndex === idx ? "var(--color-primary)" : "rgba(255,255,255,0.6)", cursor: "pointer", transition: "all 0.3s ease", boxShadow: "0 2px 4px rgba(0,0,0,0.2)" }} />
                 ))}
             </div>
         </div>
