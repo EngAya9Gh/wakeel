@@ -1,29 +1,21 @@
 import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/routing';
 import Image from 'next/image';
-import Reveal from '@/components/ui/Reveal';
-import { QrCode } from 'lucide-react';
+import ProductsShowcase from '@/components/home/ProductsShowcase';
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'HomePage' });
     const statsT = await getTranslations({ locale, namespace: 'Stats' });
-    const servicesT = await getTranslations({ locale, namespace: 'Services' });
     const testT = await getTranslations({ locale, namespace: 'Testimonials' });
     const ctaT = await getTranslations({ locale, namespace: 'HomeCTA' });
 
-    const services = [
-        { key: 'crm', icon: '💼', color: '#0EA5E9', image: '/crm/crm_image.jpeg' },
-        { key: 'whatsappOtp', icon: '💬', color: '#10B981', image: '/mobile-app.png' }
-    ];
     const stats = [
         { val: '99.9%', label: statsT('uptime') },
         { val: '< 1s', label: statsT('speed') },
         { val: '100%', label: statsT('customization') },
         { val: '24/7', label: statsT('support') }
     ];
-
-    const isRtl = locale === 'ar';
 
     return (
         <main>
@@ -188,215 +180,8 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 </div>
             </section>
 
-            {/* Services Grid - Modern & Attractive */}
-            <section style={{
-                background: 'linear-gradient(180deg, #F8FAFC 0%, #FFFFFF 100%)',
-                padding: '140px 0',
-                position: 'relative',
-                overflow: 'hidden'
-            }}>
-                {/* Decorative Elements */}
-                <div style={{
-                    position: 'absolute',
-                    top: '10%',
-                    right: '-5%',
-                    width: '400px',
-                    height: '400px',
-                    background: 'var(--color-primary)',
-                    opacity: 0.03,
-                    filter: 'blur(100px)',
-                    borderRadius: '50%',
-                    zIndex: 0
-                }}></div>
-                <div style={{
-                    position: 'absolute',
-                    bottom: '10%',
-                    left: '-5%',
-                    width: '400px',
-                    height: '400px',
-                    background: 'var(--color-accent)',
-                    opacity: 0.03,
-                    filter: 'blur(100px)',
-                    borderRadius: '50%',
-                    zIndex: 0
-                }}></div>
-
-                <div className="container" style={{ position: 'relative', zIndex: 1 }}>
-                    <div style={{ textAlign: 'center', marginBottom: '100px' }}>
-                        <div style={{
-                            color: 'var(--color-primary)',
-                            fontWeight: '800',
-                            fontSize: '1rem',
-                            textTransform: 'uppercase',
-                            letterSpacing: '3px',
-                            marginBottom: '16px'
-                        }}>
-                            {t('servicesLabel')}
-                        </div>
-                        <h2 style={{ fontSize: 'clamp(2.5rem, 5vw, 4rem)', fontWeight: '950', marginBottom: '24px', color: 'var(--color-secondary)', letterSpacing: '-2px' }}>
-                            {t('services')}
-                        </h2>
-                        <p style={{ color: 'var(--text-muted)', fontSize: '1.4rem', maxWidth: '850px', margin: '0 auto', fontWeight: '500', lineHeight: 1.6 }}>
-                            {t('servicesDesc')}
-                        </p>
-                    </div>
-
-                    <div className="services-grid-home">
-                        {services.map((s, i) => (
-                            <Reveal key={s.key}>
-                                <Link 
-                                    href={`/services#${s.key}`} 
-                                    className="glass-card" 
-                                    style={{
-                                        animationDelay: `${i * 0.1}s`,
-                                        background: 'white',
-                                        padding: '0',
-                                        border: '1px solid #F1F5F9',
-                                        position: 'relative',
-                                        borderRadius: '48px',
-                                        textAlign: 'start',
-                                        display: 'flex',
-                                        flexDirection: 'column',
-                                        height: '100%',
-                                        overflow: 'hidden',
-                                        textDecoration: 'none',
-                                        color: 'inherit',
-                                        cursor: 'pointer',
-                                        transition: 'transform 0.3s ease, box-shadow 0.3s ease'
-                                    }}
-                                >
-                                    {/* Thumbnail / Image Area */}
-                                    <div style={{
-                                        position: 'relative',
-                                        width: '100%',
-                                        height: '260px',
-                                        overflow: 'hidden',
-                                        background: s.key === 'whatsappOtp' ? '#0F172A' : '#f8f9fa'
-                                    }}>
-                                        {s.key === 'whatsappOtp' ? (
-                                            /* WhatsApp Mini Mockup */
-                                            <div style={{
-                                                width: '100%',
-                                                height: '100%',
-                                                display: 'flex',
-                                                alignItems: 'center',
-                                                justifyContent: 'center',
-                                                padding: '20px'
-                                            }}>
-                                                <div style={{
-                                                    width: '100%',
-                                                    maxWidth: '280px',
-                                                    height: '100%',
-                                                    background: '#fff',
-                                                    borderRadius: '24px 24px 0 0',
-                                                    border: '4px solid #334155',
-                                                    borderBottom: 'none',
-                                                    overflow: 'hidden',
-                                                    display: 'flex',
-                                                    flexDirection: 'column'
-                                                }}>
-                                                    {/* Header */}
-                                                    <div style={{ background: '#075E54', padding: '12px', color: '#fff', display: 'flex', alignItems: 'center', gap: '8px' }}>
-                                                        <div style={{ width: '24px', height: '24px', background: '#fff', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                                                            <Image src="/logo.svg" alt="WakeeL" width={14} height={14} style={{ objectFit: 'contain' }} />
-                                                        </div>
-                                                        <div style={{ fontWeight: '700', fontSize: '0.8rem' }}>WakeeL</div>
-                                                    </div>
-                                                    {/* Body */}
-                                                    <div style={{ flex: 1, background: '#E5DDD5', padding: '10px', display: 'flex', flexDirection: 'column', gap: '8px' }}>
-                                                        {/* Campaign Message (Bot) */}
-                                                        <div style={{
-                                                            background: '#fff',
-                                                            padding: '8px 10px',
-                                                            borderRadius: isRtl ? '8px 0 8px 8px' : '0 8px 8px 8px',
-                                                            maxWidth: '90%',
-                                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
-                                                            alignSelf: 'flex-start'
-                                                        }}>
-                                                            <div style={{ color: '#000', fontSize: '0.65rem', lineHeight: '1.4', fontWeight: '600' }}>
-                                                                {isRtl ? '✨ دعوة لمؤتمر التقنية غداً بالرياض.' : '✨ Invitation: Tech Conference tomorrow.'}
-                                                            </div>
-                                                        </div>
-
-                                                        {/* User Reply */}
-                                                        <div style={{
-                                                            background: '#dcf8c6',
-                                                            padding: '8px 10px',
-                                                            borderRadius: isRtl ? '0 8px 8px 8px' : '8px 0 8px 8px',
-                                                            maxWidth: '90%',
-                                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
-                                                            alignSelf: 'flex-end'
-                                                        }}>
-                                                            <div style={{ color: '#000', fontSize: '0.65rem', lineHeight: '1.4', fontWeight: '500' }}>
-                                                                {isRtl ? 'تأكيد الحضور' : 'Confirm Attendance'}
-                                                            </div>
-                                                        </div>
-
-                                                        {/* Ticket Message (Bot) */}
-                                                        <div style={{
-                                                            background: '#fff',
-                                                            padding: '8px 10px',
-                                                            borderRadius: isRtl ? '8px 0 8px 8px' : '0 8px 8px 8px',
-                                                            maxWidth: '90%',
-                                                            boxShadow: '0 1px 2px rgba(0,0,0,0.1)',
-                                                            alignSelf: 'flex-start',
-                                                            display: 'flex',
-                                                            alignItems: 'center',
-                                                            gap: '8px'
-                                                        }}>
-                                                            <QrCode size={28} color="#075E54" />
-                                                            <div>
-                                                                <div style={{ color: '#000', fontSize: '0.65rem', fontWeight: 'bold' }}>
-                                                                    {isRtl ? 'تذكرة الدخول' : 'Entry Ticket'}
-                                                                </div>
-                                                                <div style={{ fontSize: '0.6rem', color: '#666' }}>
-                                                                    TCK-8439
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        ) : (
-                                            <Image
-                                                src={s.image}
-                                                alt={servicesT(s.key as any)}
-                                                fill
-                                                style={{ objectFit: 'cover' }}
-                                                sizes="(max-width: 768px) 100vw, 33vw"
-                                            />
-                                        )}
-                                    </div>
-
-                                    <div style={{ padding: '60px 40px 45px', display: 'flex', flexDirection: 'column', gap: '20px', flex: 1 }}>
-                                        <div>
-                                            <h3 style={{ fontSize: '1.75rem', fontWeight: '900', marginBottom: '16px', color: 'var(--color-secondary)' }}>
-                                                {servicesT(s.key as any)}
-                                            </h3>
-                                            <p style={{ color: 'var(--text-muted)', lineHeight: '1.8', marginBottom: '32px', fontSize: '1.1rem', fontWeight: '500' }}>
-                                                {servicesT(`${s.key}Desc` as any)}
-                                            </p>
-                                        </div>
-                                        <div style={{ marginTop: 'auto' }}>
-                                            <div style={{
-                                                color: 'var(--color-primary)',
-                                                fontWeight: '800',
-                                                display: 'inline-flex',
-                                                alignItems: 'center',
-                                                gap: '12px',
-                                                fontSize: '1.1rem',
-                                                padding: '12px 0'
-                                            }}>
-                                                {t('viewService')} <span style={{ fontSize: '1.4rem' }}>{locale === 'en' ? '→' : '←'}</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </Link>
-                            </Reveal>
-                        ))}
-                    </div>
-                </div>
-            </section>
+            {/* Products Showcase - CRM, WhatsApp & ecosystem flow */}
+            <ProductsShowcase locale={locale} />
 
             {/* Testimonials - Marquee */}
             <section style={{ padding: '140px 0', background: 'var(--color-secondary)', color: 'white', overflow: 'hidden' }}>

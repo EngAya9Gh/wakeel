@@ -2,12 +2,519 @@
     "HomePage": {
         "title": "Advanced Tech Solutions for Your Business",
         "subtitle": "Empowering your growth with the most comprehensive CRM system and the fastest WhatsApp API service.",
-        "servicesDesc": "We engineer advanced digital products and cloud systems (like CRM and WhatsApp APIs) specifically designed to elevate and streamline your business.",
         "getStarted": "Request a Demo",
-        "servicesLabel": "Discover",
         "services": "Our Products",
-        "contact": "Contact Us",
-        "viewService": "Explore Product"
+        "contact": "Contact Us"
+    },
+    "Products": {
+        "eyebrow": "The Wakeel Suite",
+        "titleStart": "From the first WhatsApp message",
+        "titleHighlight": "to the final invoice",
+        "subtitle": "A smart CRM and a complete WhatsApp business platform, connected to give your team the full picture of every customer and turn conversations into real revenue.",
+        "nav": {
+            "crm": "Wakeel CRM",
+            "crmHint": "Sales & support",
+            "whatsapp": "Wakeel WhatsApp",
+            "whatsappHint": "Messaging platform"
+        },
+        "crm": {
+            "name": "Wakeel CRM",
+            "tag": "Mobile app · AI-powered",
+            "title": "A smart CRM that runs your sales and support from your phone",
+            "desc": "Every client, appointment, invoice and support ticket in one place. Leads flow in automatically from your ad campaigns, and AI tells you who is closest to buying and what to do next.",
+            "highlights": [
+                "Automatic lead capture from Facebook, Instagram, TikTok, WhatsApp and your website forms",
+                "AI lead score from 0 to 100, with a negotiation summary and an alert when contact goes quiet",
+                "Quotes and tax invoices as Arabic-ready PDFs, sent to the client over WhatsApp",
+                "Live KPIs: conversion rate, response time and loss rate for every team member"
+            ],
+            "ctaPrimary": "Request a Demo",
+            "ctaSecondary": "Explore the CRM",
+            "stats": [
+                {
+                    "value": "12",
+                    "label": "Integrated modules"
+                },
+                {
+                    "value": "7",
+                    "label": "Automatic lead sources"
+                },
+                {
+                    "value": "21",
+                    "label": "Ready-made AI prompts"
+                },
+                {
+                    "value": "13",
+                    "label": "Customizable settings lists"
+                }
+            ],
+            "float": {
+                "newLeadTitle": "New lead from TikTok Ads",
+                "newLeadMeta": "Added automatically · now",
+                "kpiLabel": "Conversion rate",
+                "kpiValue": "15.0%"
+            },
+            "screens": {
+                "clients": "Client list in the Wakeel CRM app",
+                "kpis": "Client KPIs in the Wakeel CRM app",
+                "ai": "The AI tab in a client profile in the Wakeel CRM app"
+            },
+            "features": {
+                "ai": {
+                    "title": "An AI sales assistant on your team",
+                    "desc": "Scores every lead, summarizes negotiation history and WhatsApp chats, and suggests the next step, plus an AI sales manager that analyzes your whole company.",
+                    "powered": "Powered by Google Gemini",
+                    "insightLabel": "AI insight",
+                    "insight": "Interested in the Ultimate plan. Last contact was 9 days ago. Send a quote with a 5% discount today.",
+                    "leadsLabel": "Leads ranked by buying intent",
+                    "leads": [
+                        {
+                            "name": "Tahakom Tech Co.",
+                            "score": 87,
+                            "label": "Hot",
+                            "tone": "hot"
+                        },
+                        {
+                            "name": "Taj Establishment",
+                            "score": 64,
+                            "label": "Warm",
+                            "tone": "warm"
+                        },
+                        {
+                            "name": "Masarat Co.",
+                            "score": 31,
+                            "label": "Cold",
+                            "tone": "cold"
+                        }
+                    ],
+                    "prompts": [
+                        "Analyze the chances of closing",
+                        "What discount closes this deal?",
+                        "Churn risk for this client",
+                        "Draft a friendly follow-up",
+                        "Summarize the last WhatsApp chat",
+                        "Compare this month's sales to last"
+                    ]
+                },
+                "leads": {
+                    "title": "Leads arrive on their own",
+                    "desc": "Direct connection to Meta and TikTok lead ads, your website forms and landing pages, with duplicate-number detection and a full log of every capture.",
+                    "sources": [
+                        "Facebook",
+                        "Instagram",
+                        "TikTok",
+                        "WhatsApp",
+                        "Contact form",
+                        "Landing pages",
+                        "Website forms"
+                    ]
+                },
+                "profile": {
+                    "title": "A 360° profile for every client",
+                    "desc": "Stage, priority and rating (hot / warm / cold), contacts, files and tasks, comments with @mentions, and a timeline that logs every move automatically."
+                },
+                "reports": {
+                    "title": "Reports & KPIs",
+                    "desc": "Conversion rate, average first response, days to close, and performance by source and by employee, exportable to Excel and PDF."
+                },
+                "appointments": {
+                    "title": "Organized appointments",
+                    "desc": "Meetings, calls and field visits with status tracking, rescheduling and a 7-day upcoming view."
+                },
+                "invoices": {
+                    "title": "Quotes & invoices",
+                    "desc": "Line items, discounts and 15% VAT, Arabic PDF invoices sent over WhatsApp, and partial payments by cash, transfer, card or cheque."
+                },
+                "tickets": {
+                    "title": "Tickets & satisfaction ratings",
+                    "desc": "Numbered tickets with categories and automatic SLA deadlines, opened straight from WhatsApp chats, with 1–5 star ratings from your customers."
+                },
+                "inventory": {
+                    "title": "Inventory linked to your ERP",
+                    "desc": "Scan barcodes, check stock before you sell, and push invoices to your ERP automatically."
+                }
+            },
+            "trust": [
+                "Fully isolated data for every company",
+                "Custom roles & granular permissions",
+                "Teams for sales, support & marketing",
+                "Public API for your website"
+            ],
+            "playCaption": "GET IT ON",
+            "playAria": "Download the Wakeel CRM app on Google Play",
+            "appAvailable": "Now available on Android"
+        },
+        "whatsapp": {
+            "name": "Wakeel WhatsApp",
+            "tag": "Customer service & conversation management on WhatsApp",
+            "title": "Every WhatsApp conversation in one inbox, routed to your team and tracked as a ticket until it's solved",
+            "desc": "A shared inbox for all your numbers, automatic routing to the agents on shift, and a ticket for every request that closes with a satisfaction rating and an AI summary sent to your CRM.",
+            "pillars": [
+                {
+                    "title": "Shared team inbox",
+                    "desc": "Real-time chats from all your numbers, with internal notes and quick replies"
+                },
+                {
+                    "title": "A ticket for every chat",
+                    "desc": "Opened automatically on the customer's message, then assigned and closed inside the chat"
+                },
+                {
+                    "title": "Shift-aware routing",
+                    "desc": "Round-robin or least-busy, and only to agents who are on shift"
+                },
+                {
+                    "title": "Ratings & AI summaries",
+                    "desc": "A satisfaction survey on close and an AI summary sent to your CRM"
+                }
+            ],
+            "officialNote": "Works with Meta's official WhatsApp Cloud API, with support for multiple numbers",
+            "ctaPrimary": "Start for Free",
+            "ctaSecondary": "Explore the platform",
+            "stats": [
+                {
+                    "value": "3",
+                    "label": "Conversation routing modes"
+                },
+                {
+                    "value": "4",
+                    "label": "Statuses to track every ticket"
+                },
+                {
+                    "value": "15",
+                    "label": "Team permissions"
+                },
+                {
+                    "value": "1–5",
+                    "label": "Satisfaction rating per ticket"
+                }
+            ],
+            "float": {
+                "routeLabel": "Auto-assigned to Sarah",
+                "routeMeta": "Support team · on shift now",
+                "ticketLabel": "Ticket TKT-1042 closed",
+                "ticketMeta": "AI summary: payment confirmed, order shipped"
+            },
+            "features": {
+                "inbox": {
+                    "title": "A shared inbox for all your numbers",
+                    "desc": "Every WhatsApp chat lands in real time on one screen your team works from together: filter by number, tag and stage, leave internal notes the customer never sees, answer with quick-reply shortcuts, send voice notes and media, and rename contacts.",
+                    "stages": [
+                        "New lead",
+                        "Interested",
+                        "Paid"
+                    ],
+                    "chips": [
+                        "Internal notes",
+                        "Quick replies",
+                        "Voice notes",
+                        "Colored tags",
+                        "Sales & booking pipelines",
+                        "Filter by number"
+                    ]
+                },
+                "tickets": {
+                    "title": "Tickets managed inside the chat",
+                    "desc": "A ticket opens automatically with the first message, with a category, subject and unique number. It's assigned to the first agent who replies, reopens when the customer comes back, and closes automatically after 12 to 72 hours of inactivity."
+                },
+                "routing": {
+                    "title": "Teams & shifts",
+                    "desc": "Link each number to a team, define shifts and working days, and route chats round-robin or to the least-busy agent, sending returning customers back to the same agent."
+                },
+                "visibility": {
+                    "title": "Conversation privacy",
+                    "desc": "Decide what each agent sees: every conversation, their team's conversations, or only those assigned to them, plus 15 adjustable permissions."
+                },
+                "csat": {
+                    "title": "Customer satisfaction ratings",
+                    "desc": "An automatic survey after a ticket closes, in three formats: an interactive star list, quick buttons or a text reply. The rating is saved and sent to your CRM."
+                },
+                "ai": {
+                    "title": "AI summary for every ticket",
+                    "desc": "When a ticket closes, AI summarizes the issue and its resolution in two lines and sends it to your CRM."
+                },
+                "crm": {
+                    "title": "Synced with Wakeel CRM",
+                    "desc": "The customer is created in your CRM automatically, and tickets, summaries and ratings are synced to their profile."
+                },
+                "bot": {
+                    "title": "Auto-reply bot",
+                    "desc": "Keyword rules that work around the clock, respond to button taps and list picks, and can be tied to a specific campaign."
+                },
+                "campaigns": {
+                    "title": "Official WhatsApp campaigns via Meta",
+                    "desc": "Launch campaigns to thousands of customers with Meta-approved templates: personal variables for every customer from an Excel file or a contact group, send now or schedule, and track sent, read and failed counts for every campaign, within Meta's daily limits and with clear pricing per category. Campaigns over a QR connection, paced to protect your number from bans, are available too.",
+                    "chips": [
+                        "Approved templates",
+                        "Personal variables",
+                        "Scheduled sending",
+                        "Read rate",
+                        "Meta daily limits"
+                    ],
+                    "stats": [
+                        {
+                            "value": "1,730",
+                            "label": "Sent"
+                        },
+                        {
+                            "value": "1,284",
+                            "label": "Read"
+                        },
+                        {
+                            "value": "74%",
+                            "label": "Read rate"
+                        }
+                    ]
+                },
+                "templates": {
+                    "title": "Meta templates & WhatsApp Flows",
+                    "desc": "Create templates and submit them for approval in-app, start from 7 ready-made ones, and build interactive Flows for bookings, surveys and lead capture."
+                },
+                "api": {
+                    "title": "API & webhooks for developers",
+                    "desc": "A documented REST API with secure keys, plus instant webhooks for incoming messages and sent, delivered and read receipts, with automatic retries."
+                }
+            },
+            "types": [
+                "Text",
+                "Images",
+                "PDF documents",
+                "Video",
+                "Voice & audio",
+                "Interactive buttons",
+                "Lists",
+                "Location",
+                "Approved templates",
+                "WhatsApp Flows"
+            ],
+            "extrasLabel": "Also in the platform",
+            "extras": [
+                "OTP verification via API",
+                "Analytics & exportable message logs",
+                "Prepaid wallet & VAT invoices",
+                "WhatsApp business profile editor"
+            ]
+        },
+        "ecosystem": {
+            "eyebrow": "Better together",
+            "title": "When WhatsApp meets your CRM, no lead slips away",
+            "desc": "Connect both products and every conversation automatically becomes organized data your team can act on.",
+            "steps": [
+                {
+                    "title": "A customer messages you on WhatsApp",
+                    "desc": "An incoming message on your official business number"
+                },
+                {
+                    "title": "Added to your CRM automatically",
+                    "desc": "A client profile is created instantly, with duplicate detection"
+                },
+                {
+                    "title": "Support ticket & AI summary",
+                    "desc": "A ticket opens and AI summarizes the conversation"
+                },
+                {
+                    "title": "The rating lands in the profile",
+                    "desc": "The 1–5 satisfaction score is saved to the client profile and your reports"
+                }
+            ],
+            "cta": "Book a demo of the full suite"
+        }
+    },
+    "WhatsAppMockups": {
+        "inbox": {
+            "url": "provider.wakeel.cc/live-chat",
+            "title": "Conversations",
+            "search": "Search conversations...",
+            "filterNumbers": "All numbers",
+            "filterTags": "All tags",
+            "threads": [
+                {
+                    "name": "Ahmed Alsalem",
+                    "initials": "A",
+                    "message": "I paid for my order but got no confirmation",
+                    "time": "10:42",
+                    "tag": "Complaint",
+                    "tone": "red",
+                    "unread": 2,
+                    "agent": "Sarah"
+                },
+                {
+                    "name": "Noura Alqahtani",
+                    "initials": "N",
+                    "message": "Do you deliver to Jeddah?",
+                    "time": "10:31",
+                    "tag": "VIP",
+                    "tone": "amber",
+                    "unread": 1,
+                    "agent": "Mohammed"
+                },
+                {
+                    "name": "Alrayan Est.",
+                    "initials": "R",
+                    "message": "We need a quote for 50 units",
+                    "time": "09:58",
+                    "tag": "Wholesale",
+                    "tone": "blue",
+                    "unread": 0,
+                    "agent": "Khaled"
+                },
+                {
+                    "name": "Khaled Alotaibi",
+                    "initials": "K",
+                    "message": "Thank you 🌹",
+                    "time": "Yesterday",
+                    "tag": "",
+                    "tone": "",
+                    "unread": 0,
+                    "agent": "Reem"
+                }
+            ],
+            "phone": "+966 55 012 3456",
+            "stage": "Interested",
+            "ticketCategory": "Payments",
+            "assignee": "Sarah",
+            "assign": "Assign",
+            "close": "Close ticket",
+            "msgIn1": "Hello, I paid for order #4821 yesterday and haven't received a confirmation",
+            "note": "Internal note: bank transfer verified ✔",
+            "noteAuthor": "Sarah",
+            "msgOut1": "Hi Ahmed, your payment is confirmed and your order will arrive today 🚚",
+            "msgIn2": "Great, thank you!",
+            "composer": "Type a message... or / for quick replies"
+        },
+        "statuses": {
+            "open": "Open",
+            "pending": "Pending",
+            "resolved": "Resolved",
+            "closed": "Closed"
+        },
+        "tickets": {
+            "url": "provider.wakeel.cc/tickets",
+            "title": "Tickets Inbox",
+            "subtitle": "Manage tickets and resolve customer issues",
+            "search": "Search by ticket number, title, phone...",
+            "filter": "All statuses",
+            "columns": {
+                "id": "Ticket ID",
+                "subject": "Subject",
+                "status": "Status",
+                "agent": "Agent",
+                "rating": "Rating"
+            },
+            "rows": [
+                {
+                    "id": "TKT-1042",
+                    "subject": "Payment issue",
+                    "status": "open",
+                    "agent": "Sarah",
+                    "rating": 0
+                },
+                {
+                    "id": "TKT-1041",
+                    "subject": "Delivery question",
+                    "status": "pending",
+                    "agent": "Mohammed",
+                    "rating": 0
+                },
+                {
+                    "id": "TKT-1039",
+                    "subject": "Refund request",
+                    "status": "resolved",
+                    "agent": "Sarah",
+                    "rating": 5
+                },
+                {
+                    "id": "TKT-1037",
+                    "subject": "Account details update",
+                    "status": "closed",
+                    "agent": "Reem",
+                    "rating": 4
+                }
+            ],
+            "summaryLabel": "AI summary · TKT-1039",
+            "summary": "The customer asked for a refund because of a late shipment; the refund was approved and the customer notified."
+        },
+        "shifts": {
+            "url": "provider.wakeel.cc/teams-shifts",
+            "title": "Teams & Shifts",
+            "subtitle": "Route conversations automatically to on-shift agents",
+            "tabs": [
+                "Teams",
+                "Shifts",
+                "Schedule"
+            ],
+            "team": "Support team",
+            "members": [
+                {
+                    "name": "Sarah",
+                    "onShift": true
+                },
+                {
+                    "name": "Mohammed",
+                    "onShift": true
+                },
+                {
+                    "name": "Reem",
+                    "onShift": false
+                },
+                {
+                    "name": "Khaled",
+                    "onShift": true
+                }
+            ],
+            "channel": "+966 55 012 3456",
+            "routing": "Round-robin · on-shift agents only · returning customers keep their agent",
+            "onDuty": "On duty now",
+            "people": "people",
+            "nextDay": "next day",
+            "days": [
+                "Su",
+                "Mo",
+                "Tu",
+                "We",
+                "Th",
+                "Fr",
+                "Sa"
+            ],
+            "list": [
+                {
+                    "name": "Morning shift",
+                    "start": "08:00",
+                    "end": "16:00",
+                    "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4
+                    ],
+                    "people": 3
+                },
+                {
+                    "name": "Evening shift",
+                    "start": "16:00",
+                    "end": "00:00",
+                    "days": [
+                        0,
+                        1,
+                        2,
+                        3,
+                        4,
+                        6
+                    ],
+                    "people": 2
+                },
+                {
+                    "name": "Weekend shift",
+                    "start": "10:00",
+                    "end": "18:00",
+                    "days": [
+                        5,
+                        6
+                    ],
+                    "people": 1
+                }
+            ]
+        }
     },
     "Stats": {
         "uptime": "Uptime & Reliability",
@@ -55,7 +562,7 @@
         "crm": "Customer Relationship Management (CRM)",
         "crmDesc": "A fully customized and integrated CRM system to help you manage your sales, customers, and team efficiently and effortlessly.",
         "whatsappOtp": "Integrated WhatsApp Business Platform",
-        "whatsappOtpDesc": "A robust platform to manage marketing campaigns, build interactive Chatbots, and send lightning-fast OTPs and alerts programmatically.",
+        "whatsappOtpDesc": "A complete customer-service platform on WhatsApp: a shared inbox for your team and support tickets routed automatically to your agents and closed with a satisfaction rating, alongside marketing campaigns, auto-replies and OTP messages.",
         "ctaTitle": "Ready to Upgrade Your Business?",
         "ctaSubtitle": "Join companies using our technology to manage sales and accelerate customer communication.",
         "ctaButton": "Contact Sales Now",
@@ -76,7 +583,15 @@
         "otpFeature2": "Automated Replies (Chatbot)",
         "otpFeature2Desc": "Automate responses to customer inquiries 24/7 intelligently.",
         "otpFeature3": "Fast OTP & Alerts",
-        "otpFeature3Desc": "Ultra-fast and reliable API integration to secure your users' accounts."
+        "otpFeature3Desc": "Ultra-fast and reliable API integration to secure your users' accounts.",
+        "screensBadge": "Inside the platform",
+        "screensTitle": "Screens built for customer-service teams",
+        "screensDesc": "From the first message to the customer's rating, every step is clear to your team and your managers.",
+        "screens": {
+            "inbox": "Shared inbox: the chat, its ticket and internal notes on one screen",
+            "tickets": "Tickets inbox: search and filter by status, with ratings and AI summaries",
+            "shifts": "Teams & shifts: conversations routed to whoever is on duty"
+        }
     },
     "Testimonials": {
         "title": "Client Success Stories",

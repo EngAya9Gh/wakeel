@@ -4,7 +4,15 @@ import { Link } from '@/i18n/routing';
 import Reveal from '@/components/ui/Reveal';
 import ImageSlider from '@/components/ui/ImageSlider';
 import MacbookMockup from '@/components/ui/MacbookMockup';
-import { CheckCircle, Zap, BarChart, Shield, Settings, MessageSquare, Globe, Fingerprint, MapPin } from 'lucide-react';
+import GooglePlayButton from '@/components/ui/GooglePlayButton';
+import WhatsAppScreens from '@/components/services/WhatsAppScreens';
+import { WHATSAPP_PLATFORM_URL } from '@/lib/links';
+import {
+    CheckCircle, Zap, BarChart, Shield, Settings, MessageSquare, Globe, Fingerprint, MapPin,
+    BrainCircuit, Magnet, Receipt, CalendarCheck, Ticket, ScanBarcode, MessagesSquare, Shuffle
+} from 'lucide-react';
+
+type Pillar = { title: string; desc: string };
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
@@ -18,6 +26,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 const crmScreenshots = [
     { src: '/crm/crm0.jpeg', alt: 'CRM Dashboard Overview' },
     { src: '/crm/crm1_image.jpeg', alt: 'CRM Clients Management' },
+    { src: '/crm/client-ai.png', alt: 'CRM Client AI Assistant' },
+    { src: '/crm/tickets.png', alt: 'CRM Tickets Management' },
+    { src: '/crm/ticket-details.png', alt: 'CRM Ticket Details' },
+    { src: '/crm/evaluations.png', alt: 'CRM Ratings Management' },
+    { src: '/crm/rating-thanks.png', alt: 'CRM Customer Rating Page' },
+    { src: '/crm/appointments-calendar.png', alt: 'CRM Appointments Calendar' },
+    { src: '/crm/appointments-day.png', alt: 'CRM Daily Appointments' },
     { src: '/crm/crm3.jpeg', alt: 'CRM Reports & Analytics' },
     { src: '/crm/crm4.jpeg', alt: 'CRM Sales Pipeline' },
     { src: '/crm/crm_image.jpeg', alt: 'CRM Activity Feed' },
@@ -29,20 +44,32 @@ const crmScreenshots = [
     { src: '/crm/crm9.jpeg', alt: 'CRM Interface' },
     { src: '/crm/crmn.jpg', alt: 'CRM Interface' },
     { src: '/crm/crrm9.jpeg', alt: 'CRM Interface' },
-    { src: '/crm/crm-0.jpg', alt: 'CRM Interface' },
     { src: '/crm/crm-1.jpg', alt: 'CRM Interface' },
     { src: '/crm/crm-2.jpg', alt: 'CRM Interface' },
     { src: '/crm/crm-3.jpg', alt: 'CRM Interface' },
     { src: '/crm/crm-5.jpg', alt: 'CRM Interface' },
     { src: '/crm/crm-6.jpg', alt: 'CRM Interface' },
     { src: '/crm/crm-7.jpg', alt: 'CRM Interface' },
-    { src: '/crm/crm-8.jpg', alt: 'CRM Interface' },
 ];
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'Services' });
+    const crmT = await getTranslations({ locale, namespace: 'Products.crm' });
+    const waPillars = (await getTranslations({ locale, namespace: 'Products.whatsapp' })).raw('pillars') as Pillar[];
     const isRtl = locale === 'ar';
+
+    const crmFeatures = [
+        { icon: <BarChart size={32} color="#3B82F6" />, title: t('crmFeature1'), desc: t('crmFeature1Desc') },
+        { icon: <Shield size={32} color="#10B981" />, title: t('security'), desc: t('securityDesc') },
+        { icon: <CheckCircle size={32} color="#F59E0B" />, title: t('crmFeature2'), desc: t('crmFeature2Desc') },
+        { icon: <BrainCircuit size={32} color="#FF6600" />, title: crmT('features.ai.title'), desc: crmT('features.ai.desc') },
+        { icon: <Magnet size={32} color="#EC4899" />, title: crmT('features.leads.title'), desc: crmT('features.leads.desc') },
+        { icon: <Receipt size={32} color="#8B5CF6" />, title: crmT('features.invoices.title'), desc: crmT('features.invoices.desc') },
+        { icon: <CalendarCheck size={32} color="#0EA5E9" />, title: crmT('features.appointments.title'), desc: crmT('features.appointments.desc') },
+        { icon: <Ticket size={32} color="#F43F5E" />, title: crmT('features.tickets.title'), desc: crmT('features.tickets.desc') },
+        { icon: <ScanBarcode size={32} color="#14B8A6" />, title: crmT('features.inventory.title'), desc: crmT('features.inventory.desc') }
+    ];
 
     return (
         <main style={{ background: '#FAFAFA' }}>
@@ -127,25 +154,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                                     >
                                         {isRtl ? 'اطلب عرض تجريبي مجاني' : 'Request a Free Demo'}
                                     </Link>
-                                    <Link
-                                        href="/contact"
-                                        style={{
-                                            display: 'inline-flex',
-                                            alignItems: 'center',
-                                            gap: '10px',
-                                            background: 'rgba(255,255,255,0.07)',
-                                            color: '#fff',
-                                            padding: '16px 36px',
-                                            borderRadius: '100px',
-                                            fontWeight: '700',
-                                            fontSize: '1.1rem',
-                                            textDecoration: 'none',
-                                            border: '1px solid rgba(255,255,255,0.15)',
-                                            transition: 'all 0.3s ease'
-                                        }}
-                                    >
-                                        {isRtl ? 'تواصل معنا' : 'Contact Us'}
-                                    </Link>
+                                    <GooglePlayButton caption={crmT('playCaption')} ariaLabel={crmT('playAria')} />
                                 </div>
                             </Reveal>
                         </div>
@@ -166,27 +175,15 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                             gap: '30px',
                             marginTop: '40px'
                         }}>
-                            <Reveal delay={100}>
-                                <div style={{ background: 'rgba(255,255,255,0.03)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)' }}>
-                                    <BarChart size={32} color="#3B82F6" style={{ marginBottom: '20px' }} />
-                                    <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '12px', color: '#F8FAFC' }}>{t('crmFeature1' as any) || (isRtl ? 'إدارة شاملة' : 'Comprehensive Management')}</h4>
-                                    <p style={{ color: '#94A3B8', lineHeight: '1.6' }}>{t('crmFeature1Desc' as any) || (isRtl ? 'لوحة تحكم احترافية لمتابعة المبيعات' : 'Professional dashboard to track sales.')}</p>
-                                </div>
-                            </Reveal>
-                            <Reveal delay={200}>
-                                <div style={{ background: 'rgba(255,255,255,0.03)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)' }}>
-                                    <Shield size={32} color="#10B981" style={{ marginBottom: '20px' }} />
-                                    <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '12px', color: '#F8FAFC' }}>{t('security')}</h4>
-                                    <p style={{ color: '#94A3B8', lineHeight: '1.6' }}>{t('securityDesc')}</p>
-                                </div>
-                            </Reveal>
-                            <Reveal delay={300}>
-                                <div style={{ background: 'rgba(255,255,255,0.03)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)' }}>
-                                    <CheckCircle size={32} color="#F59E0B" style={{ marginBottom: '20px' }} />
-                                    <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '12px', color: '#F8FAFC' }}>{t('crmFeature2' as any) || (isRtl ? 'تقارير دقيقة' : 'Accurate Reports')}</h4>
-                                    <p style={{ color: '#94A3B8', lineHeight: '1.6' }}>{t('crmFeature2Desc' as any) || (isRtl ? 'إحصائيات حية ورسوم بيانية' : 'Live statistics and charts.')}</p>
-                                </div>
-                            </Reveal>
+                            {crmFeatures.map((feature, idx) => (
+                                <Reveal key={feature.title} delay={(idx % 3 + 1) * 100}>
+                                    <div style={{ background: 'rgba(255,255,255,0.03)', padding: '32px', borderRadius: '24px', border: '1px solid rgba(255,255,255,0.05)', backdropFilter: 'blur(10px)', height: '100%' }}>
+                                        <div style={{ marginBottom: '20px' }}>{feature.icon}</div>
+                                        <h4 style={{ fontSize: '1.4rem', fontWeight: '800', marginBottom: '12px', color: '#F8FAFC' }}>{feature.title}</h4>
+                                        <p style={{ color: '#94A3B8', lineHeight: '1.6' }}>{feature.desc}</p>
+                                    </div>
+                                </Reveal>
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -251,6 +248,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                                 {/* Feature List */}
                                 <div style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
                                     {[
+                                        { i: <MessagesSquare color="#10B981" size={24} />, t: waPillars[0].title, d: waPillars[0].desc },
+                                        { i: <Ticket color="#10B981" size={24} />, t: waPillars[1].title, d: waPillars[1].desc },
+                                        { i: <Shuffle color="#10B981" size={24} />, t: waPillars[2].title, d: waPillars[2].desc },
                                         { i: <Zap color="#10B981" size={24} />, t: t('otpFeature1' as any) || (isRtl ? 'سرعة البرق' : 'Lightning Fast'), d: t('otpFeature1Desc' as any) || (isRtl ? 'رسائل التحقق تصل في أقل من ثانية.' : 'Messages arrive in under a second.') },
                                         { i: <Globe color="#10B981" size={24} />, t: t('otpFeature2' as any) || (isRtl ? 'تكامل مرن' : 'Flexible API'), d: t('otpFeature2Desc' as any) || (isRtl ? 'ربط برمجي سهل مع أي لغة برمجة.' : 'Easy API integration.') },
                                         { i: <Fingerprint color="#10B981" size={24} />, t: t('otpFeature3' as any) || (isRtl ? 'موثوقية فائقة' : 'High Reliability'), d: t('otpFeature3Desc' as any) || (isRtl ? 'وصول بنسبة 99.9%.' : '99.9% delivery rate.') }
@@ -278,7 +278,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                                 {/* WhatsApp CTA Buttons */}
                                 <div style={{ display: 'flex', gap: '16px', flexWrap: 'wrap', marginTop: '40px', justifyContent: 'center' }}>
                                     <a
-                                        href="https://provider.wakeel.cc/"
+                                        href={WHATSAPP_PLATFORM_URL}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         style={{
@@ -444,6 +444,9 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
                             </Reveal>
                         </div>
                     </div>
+
+                    {/* Platform screens + conversation-management features */}
+                    <WhatsAppScreens locale={locale} />
                 </div>
             </section>
 
