@@ -59,8 +59,10 @@ pm2 save
 # Bring PM2 and the site back automatically when the server reboots.
 if ! crontab -l 2>/dev/null | grep -Fq "pm2 resurrect"; then
     echo "Adding @reboot crontab entry for PM2..."
+    # cron doesn't load nvm, so give it the absolute folder that holds node and pm2
+    NODE_BIN_DIR="$(dirname "$(command -v pm2)")"
     # `|| true`: with set -e, a missing crontab would otherwise abort the subshell before the echo
-    (crontab -l 2>/dev/null || true; echo "@reboot /bin/bash -lc 'pm2 resurrect'") | crontab -
+    (crontab -l 2>/dev/null || true; echo "@reboot PATH=$NODE_BIN_DIR:/usr/bin:/bin pm2 resurrect") | crontab -
 fi
 # ---------------------------------------------------------------------------
 
