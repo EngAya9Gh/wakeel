@@ -28,7 +28,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
             {/* Story & Mission Section - Overlapping Premium Cards */}
             <section style={{ marginTop: '-80px', position: 'relative', zIndex: 3 }}>
                 <div className="container">
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '40px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '40px' }}>
                         <div className="animate-fade-in" style={{
                             padding: '80px 50px',
                             background: 'white',
@@ -80,7 +80,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                         <div style={{ width: '60px', height: '6px', background: 'var(--color-primary)', margin: '0 auto', borderRadius: '10px', opacity: 0.3 }}></div>
                     </div>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(260px, 1fr))', gap: '32px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 260px), 1fr))', gap: '32px' }}>
                         {values.map((v, i) => (
                             <div key={v.key} className="animate-fade-in" style={{
                                 animationDelay: `${i * 0.1}s`,
@@ -135,7 +135,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                         letterSpacing: '-2px'
                     }}>{t('team')}</h2>
 
-                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr))', gap: '60px' }}>
+                    <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 320px), 1fr))', gap: '60px' }}>
                         {[1, 2, 3].map((i) => (
                             <div key={i} className="animate-fade-in" style={{ animationDelay: `${i * 0.1}s` }}>
                                 <div style={{

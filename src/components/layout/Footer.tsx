@@ -39,7 +39,7 @@ export default async function Footer({ locale }: { locale: string }) {
             <div className="container" style={{ position: 'relative', zIndex: 1 }}>
                 <div style={{
                     display: 'grid',
-                    gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                    gridTemplateColumns: 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))',
                     gap: '4rem',
                     marginBottom: '6rem'
                 }}>
