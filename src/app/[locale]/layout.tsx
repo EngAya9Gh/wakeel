@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
                     url: '/og-image.png',
                     width: 1200,
                     height: 630,
-                    alt: 'WakeeL Technologies',
+                    alt: 'WakeeL — Rushd AI Company',
                 },
             ],
         },

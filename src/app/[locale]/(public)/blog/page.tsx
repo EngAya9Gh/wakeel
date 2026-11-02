@@ -10,7 +10,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     const { locale } = await params;
     const t = await getTranslations({ locale, namespace: 'Navigation' });
     return {
-        title: `${t('blog')} | WakeeL Technologies`,
+        title: `${t('blog')} | WakeeL`,
         description: locale === 'ar' ? 'اكتشف أحدث المقالات والأفكار في عالم التكنولوجيا.' : 'Explore our latest articles and insights on technology.',
     };
 }
