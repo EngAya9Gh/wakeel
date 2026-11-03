@@ -104,19 +104,6 @@ export default async function Footer({ locale }: { locale: string }) {
                                     📞 {phoneSa}
                                 </a>
                             </div>
-
-                            {/* Syria */}
-                            <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
-                                <h5 style={{ fontWeight: '800', fontSize: '1rem', color: 'white' }}>{t('syriaOffice')}</h5>
-                                <p style={{ fontSize: '0.9rem', color: '#94A3B8', lineHeight: '1.5' }}>
-                                    <span style={{ color: 'var(--color-primary)' }}>📍</span> {locale === 'ar' ? 'دمشق' : 'Damascus'}
-                                </p>
-                                {settings?.phone_sy && (
-                                    <a href={`tel:${settings.phone_sy.replace(/\s/g, '')}`} style={{ fontSize: '0.9rem', color: '#94A3B8', direction: 'ltr', textAlign: isAr ? 'right' : 'left', whiteSpace: 'nowrap' }}>
-                                        📞 {settings.phone_sy}
-                                    </a>
-                                )}
-                            </div>
                         </div>
 
                         {/* Global Email */}

@@ -617,9 +617,8 @@
         "services": "منتجاتنا",
         "blog": "المدونة",
         "contact": "اتصل بنا",
-        "offices": "مكاتبنا",
+        "offices": "مكتبنا",
         "riyadhOffice": "مكتب الرياض",
-        "syriaOffice": "مكتب سوريا",
         "allRights": "جميع الحقوق محفوظة",
         "followUs": "تابعنا على"
     },
@@ -651,7 +650,7 @@
     "Metadata": {
         "title": "WakeeL | نظام CRM المتكامل ومزود خدمة WhatsApp OTP",
         "description": "اكتشف حلول WakeeL التقنية. نقدم نظام CRM مخصص لإدارة أعمالك بكفاءة، وخدمة WhatsApp API فائقة السرعة لرسائل التحقق OTP.",
-        "keywords": "CRM, نظام إدارة العملاء, WhatsApp OTP, واتساب API, السعودية, الرياض, سوريا, حلول برمجية"
+        "keywords": "CRM, نظام إدارة العملاء, WhatsApp OTP, واتساب API, السعودية, الرياض, حلول برمجية"
     },
     "Admin": {
         "dashboard": "لوحة التحكم",

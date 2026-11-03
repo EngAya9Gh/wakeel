@@ -617,9 +617,8 @@
         "services": "Our Products",
         "blog": "Blog",
         "contact": "Contact Us",
-        "offices": "Our Offices",
+        "offices": "Our Office",
         "riyadhOffice": "Riyadh Office",
-        "syriaOffice": "Syria Office",
         "allRights": "All rights reserved",
         "followUs": "Follow Us"
     },
@@ -651,7 +650,7 @@
     "Metadata": {
         "title": "WakeeL | Integrated CRM & WhatsApp OTP Provider",
         "description": "Discover WakeeL's technical solutions. We offer a customized CRM system to efficiently manage your business, and an ultra-fast WhatsApp API for OTP messages.",
-        "keywords": "CRM, Customer Management System, WhatsApp OTP, WhatsApp API, Saudi Arabia, Riyadh, Syria, Software Solutions"
+        "keywords": "CRM, Customer Management System, WhatsApp OTP, WhatsApp API, Saudi Arabia, Riyadh, Software Solutions"
     },
     "Admin": {
         "dashboard": "Dashboard",
