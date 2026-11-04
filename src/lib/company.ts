@@ -10,12 +10,12 @@ export const COMPANY = {
     phoneDisplay: '+966 53 959 2520',
     website: 'https://rushdai.com',
     address: {
-        ar: '7782 طريق الملك عبدالعزيز، حي الربيع، الرقم الفرعي 4565، الرياض 13315، المملكة العربية السعودية',
-        en: '7782 King Abdulaziz Rd, Ar Rabie Dist., Additional No. 4565, Riyadh 13315, Saudi Arabia',
-        street: '7782 King Abdulaziz Rd, Additional No. 4565',
-        district: 'Ar Rabie',
+        ar: 'عبدالله المخضوب، حي الوادي، الرياض 13313، المملكة العربية السعودية',
+        en: 'Abdullah Al Makhdoub, Al Wadi Dist., Riyadh 13313, Saudi Arabia',
+        street: 'Abdullah Al Makhdoub',
+        district: 'Al Wadi',
         city: 'Riyadh',
-        postalCode: '13315',
+        postalCode: '13313',
         country: 'SA'
     },
     // Legal pages live on the provider platform
