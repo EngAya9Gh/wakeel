@@ -16,7 +16,7 @@ export default function WhatsAppButton({ phone }: { phone?: string }) {
             style={{
                 position: 'fixed',
                 bottom: '2rem',
-                right: '2rem',
+                left: '2rem', // the website chat widget uses the bottom-right corner
                 backgroundColor: '#25D366',
                 color: 'white',
                 width: '60px',
