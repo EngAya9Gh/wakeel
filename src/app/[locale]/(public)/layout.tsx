@@ -3,19 +3,16 @@ import Script from 'next/script';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import StructuredData from '@/components/seo/StructuredData';
-import WhatsAppButton from '@/components/ui/WhatsAppButton';
 
 type Props = {
     children: ReactNode;
     params: Promise<{ locale: string }>;
 };
 
-import { getSettings } from '@/actions/admin/settings';
 import { WEBCHAT_WIDGET_ID, WEBCHAT_WIDGET_SRC } from '@/lib/links';
 
 export default async function PublicLayout({ children, params }: Props) {
     const { locale } = await params;
-    const settings = await getSettings();
 
     return (
         <>
@@ -25,7 +22,6 @@ export default async function PublicLayout({ children, params }: Props) {
                 {children}
             </main>
             <Footer locale={locale} />
-            <WhatsAppButton phone={settings?.whatsapp || undefined} />
             {/* Website chat widget: loads after the page is idle and sits in the bottom-right corner */}
             <Script src={WEBCHAT_WIDGET_SRC} data-id={WEBCHAT_WIDGET_ID} strategy="lazyOnload" />
         </>
